@@ -6,11 +6,35 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Awaiken">
-    <!-- Page Title -->
-    <title>Artistic - قالب بورتفوليو إبداعي</title>
+    <!-- Primary Meta Tags -->
+    <title>Dozz | أطلق أسطولك الذكي وابدأ مشروعك بنظام الفرنشايز</title>
+    <meta name="title" content="Dozz | أطلق أسطولك الذكي وابدأ مشروعك بنظام الفرنشايز">
+    <meta name="description"
+        content="Dozz توفر لك حلًا متكاملًا لإطلاق وإدارة أسطول مركبات ذكية بنظام الفرنشايز، مع منصة تقنية متقدمة ودعم تشغيلي وتسويقي لضمان نمو مشروعك.">
+    <meta name="keywords"
+        content="Dozz, دوز, فرنشايز Dozz, أسطول مركبات ذكية, سكوتر كهربائي, مشاركة المركبات, منصة إدارة الأسطول, مشروع مربح, نقل ذكي">
+    <meta name="author" content="Dozz">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dozz | أطلق أسطولك الذكي بنظام الفرنشايز">
+    <meta property="og:description"
+        content="ابدأ مشروعك مع Dozz عبر نظام فرنشايز متكامل يشمل المركبات، المنصة التقنية، والدعم التشغيلي لتحقيق عائد استثماري سريع.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://dozz.com">
+    <meta property="og:site_name" content="Dozz">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dozz | منصة ذكية لإطلاق وإدارة الأساطيل">
+    <meta name="twitter:description"
+        content="حل متكامل لإطلاق فرنشايز أسطول مركبات ذكية مع Dozz، من التخطيط وحتى التشغيل والنمو.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+
+
+
+
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo-favicon.png">
     <!-- Google Fonts Css-->
@@ -35,159 +59,6 @@
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
-    <style>
-        .doz-changelog-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .doz-changelog-header {
-            text-align: center;
-            margin-bottom: 50px;
-            border-bottom: 3px solid #E34603;
-            padding-bottom: 30px;
-        }
-
-        .doz-changelog-title {
-            font-size: 2.5em;
-            color: #E34603;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .doz-changelog-description {
-            font-size: 1.1em;
-            color: #FFFFFF;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .doz-version-card {
-            background-color: #2a2a2a;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-right: 5px solid #E34603;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .doz-version-card:hover {
-            transform: translateX(-5px);
-            box-shadow: 0 10px 30px rgba(227, 70, 3, 0.3);
-        }
-
-        .doz-version-header {
-            margin-bottom: 20px;
-        }
-
-        .doz-version-number {
-            font-size: 1.8em;
-            color: #E34603;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .doz-release-date {
-            font-size: 1em;
-            color: #FFFFFF;
-            opacity: 0.7;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .doz-version-intro {
-            font-size: 1.05em;
-            color: #FFFFFF;
-            margin-bottom: 25px;
-            line-height: 1.7;
-            padding: 15px;
-            background-color: #1B1B1B;
-            border-radius: 8px;
-        }
-
-        .doz-section-title {
-            font-size: 1.3em;
-            color: #E34603;
-            font-weight: bold;
-            margin: 25px 0 15px 0;
-            padding-right: 10px;
-            border-right: 4px solid #E34603;
-        }
-
-        .doz-feature-list {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .doz-feature-item {
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: #1B1B1B;
-            border-radius: 8px;
-            position: relative;
-            padding-right: 40px;
-            transition: background-color 0.3s ease;
-        }
-
-        .doz-feature-item:hover {
-            background-color: #333333;
-        }
-
-        .doz-feature-item::before {
-            content: "✓";
-            position: absolute;
-            right: 15px;
-            color: #E34603;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .doz-bugfix-item {
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            background-color: #1B1B1B;
-            border-radius: 8px;
-            position: relative;
-            padding-right: 40px;
-            transition: background-color 0.3s ease;
-        }
-
-        .doz-bugfix-item:hover {
-            background-color: #333333;
-        }
-
-        .doz-bugfix-item::before {
-            content: "🔧";
-            position: absolute;
-            right: 15px;
-            font-size: 1.2em;
-        }
-
-        .doz-footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #2a2a2a;
-            color: #FFFFFF;
-            opacity: 0.6;
-        }
-
-        @media (max-width: 768px) {
-            .doz-changelog-title {
-                font-size: 2em;
-            }
-
-            .doz-version-card {
-                padding: 20px;
-            }
-
-            .doz-version-number {
-                font-size: 1.5em;
-            }
-        }
-    </style>
 </head>
 
 <body>
