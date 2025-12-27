@@ -880,10 +880,51 @@ body:has(.offcanvas) {
 
 .hero {
 	position: relative;
+	padding: 265px 0 165px;
+	overflow: hidden;
+}
+
+.hero.bg-image {
+	background-image: url("../images/hero-bg.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* التعتيم */
+.hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: 1;
+}
+
+.hero-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	/* تغميق خفيف */
+	z-index: 2;
+}
+
+.hero .container {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	/* توسيط عمودي */
+	justify-content: center;
+	/* توسيط أفقي */
+	text-align: center;
+}
+
+.hero.videoes {
+	position: relative;
 	padding: 222px 0 120px;
 }
 
-.hero::before {
+.hero.videoes::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -896,7 +937,7 @@ body:has(.offcanvas) {
 	z-index: 1;
 }
 
-.hero .hero-bg-video {
+.hero.videoes .hero-bg-video {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -906,19 +947,19 @@ body:has(.offcanvas) {
 	height: 100%;
 }
 
-.hero .hero-bg-video video {
+.hero.videoes .hero-bg-video video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.hero.bg-image {
+.hero.videoes.bg-image {
 	background-position: center center;
 	background-size: cover;
 	padding: 265px 0 165px;
 }
 
-.hero.bg-video {
+.hero.videoes.bg-video {
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
@@ -1064,7 +1105,7 @@ body:has(.offcanvas) {
 
 .hero-content .section-title {
 	margin-bottom: 60px;
-	text-align: right;
+	text-align: center;
 }
 
 .hero-content .section-title p {
@@ -5379,6 +5420,7 @@ body:has(.offcanvas) {
 .google-map-iframe:hover iframe {
 	filter: grayscale(0%);
 }
+
 /************************************/
 /***      35. Responsive css      ***/
 /************************************/
@@ -5702,7 +5744,7 @@ body:has(.offcanvas) {
 
 	.tool-item {
 		padding: 20px 20px 20px 50px;
-		margin: 20px 0 30px 20px;
+		margin: 20px 20px 30px 0;
 	}
 
 	.tool-item .icon-box {
@@ -7075,7 +7117,7 @@ body:has(.offcanvas) {
 
 	.tool-item {
 		padding: 15px 15px 15px 40px;
-		margin: 15px 0 30px 15px;
+		margin: 15px 15px 30px 0;
 	}
 
 	.tool-item .icon-box {
