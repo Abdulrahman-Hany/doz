@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <!-- Primary Meta Tags -->
+<!-- Primary Meta Tags -->
     <title>Dozz | أطلق أسطولك الذكي وابدأ مشروعك بنظام الفرنشايز</title>
     <meta name="title" content="Dozz | أطلق أسطولك الذكي وابدأ مشروعك بنظام الفرنشايز">
     <meta name="description"
@@ -32,9 +32,6 @@
         content="حل متكامل لإطلاق فرنشايز أسطول مركبات ذكية مع Dozz، من التخطيط وحتى التشغيل والنمو.">
     <meta name="twitter:image" content="images/og-image.jpg">
 
-
-
-
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo-favicon.png">
     <!-- Google Fonts Css-->
@@ -59,6 +56,234 @@
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
+    <style>
+        .dozs {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .dozs::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .doz-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp .8s ease-out;
+        }
+
+        .doz-left-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideInRight .8s ease-out .2s backwards;
+        }
+
+        .doz-main-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #fff, #e34603);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .doz-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, .8);
+            margin-bottom: 60px;
+        }
+
+        .doz-disclaimer {
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .5);
+            line-height: 1.6;
+            padding: 20px;
+            border-right: 3px solid #e34603;
+            background: rgba(227, 70, 3, .05);
+            border-radius: 8px;
+        }
+
+        .doz-disclaimer p {
+            margin-bottom: 10px;
+        }
+
+        .doz-right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            animation: slideInLeft .8s ease-out .4s backwards;
+        }
+
+        .doz-calculator-card {
+            background: linear-gradient(135deg, rgba(20, 20, 20, .9), rgba(30, 30, 30, .8));
+            border: 2px solid rgba(227, 70, 3, .3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(227, 70, 3, .2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doz-scooter-control {
+            margin-bottom: 50px;
+        }
+
+        .doz-label {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .6);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .doz-control-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .doz-control-btn {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #e34603;
+            background: rgba(227, 70, 3, .1);
+            color: #e34603;
+            font-size: 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .doz-control-btn:hover {
+            background: #e34603;
+            color: #fff;
+        }
+
+        .doz-scooter-count {
+            font-size: 5rem;
+            font-weight: 800;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .doz-scooter-count.updated {
+            animation: countUpdate .4s ease;
+        }
+
+        .doz-stats-section {
+            margin-top: 40px;
+        }
+
+        .doz-stat-item {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(227, 70, 3, .05);
+            border-right: 4px solid #e34603;
+            border-radius: 15px;
+        }
+
+        .doz-stat-label {
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .6);
+            margin-bottom: 15px;
+        }
+
+        .doz-stat-value {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 90px;
+        }
+
+        .doz-stat-value.highlight {
+            animation: valueHighlight .5s ease;
+        }
+
+        .doz-stat-note {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .doz-currency {
+            color: #e34603;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes countUpdate {
+            50% {
+                transform: scale(1.1);
+                color: #e34603;
+            }
+        }
+
+        @keyframes valueHighlight {
+            50% {
+                transform: scale(1.05);
+                color: #e34603;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .doz-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
 </head>
 
 <body>

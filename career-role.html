@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <!-- Primary Meta Tags -->
+   <!-- Primary Meta Tags -->
     <title>Dozz | أطلق أسطولك الذكي وابدأ مشروعك بنظام الفرنشايز</title>
     <meta name="title" content="Dozz | أطلق أسطولك الذكي وابدأ مشروعك بنظام الفرنشايز">
     <meta name="description"
@@ -33,8 +33,6 @@
     <meta name="twitter:image" content="images/og-image.jpg">
 
 
-
-
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo-favicon.png">
     <!-- Google Fonts Css-->
@@ -59,6 +57,218 @@
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
+        <style>
+
+        .safety-dozz-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .safety-dozz-hero {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #E34603;
+            padding-bottom: 30px;
+        }
+
+        .safety-dozz-main-title {
+            font-size: 2.5em;
+            color: #E34603;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .safety-dozz-intro-text {
+            font-size: 1.1em;
+            color: #FFFFFF;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .safety-dozz-content-block {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-right: 5px solid #E34603;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .safety-dozz-content-block:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 30px rgba(227, 70, 3, 0.3);
+        }
+
+        .safety-dozz-section-heading {
+            font-size: 1.8em;
+            color: #E34603;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-right: 10px;
+        }
+
+        .safety-dozz-features-grid {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .safety-dozz-feature-box {
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background-color: #1B1B1B;
+            border-radius: 8px;
+            position: relative;
+            padding-right: 45px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .safety-dozz-feature-box:hover {
+            background-color: #333333;
+            transform: translateX(-3px);
+        }
+
+        .safety-dozz-feature-box::before {
+            content: "🛡️";
+            position: absolute;
+            right: 15px;
+            top: 18px;
+            font-size: 1.3em;
+        }
+
+        .safety-dozz-feature-title {
+            font-weight: bold;
+            color: #E34603;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+
+        .safety-dozz-feature-description {
+            color: #FFFFFF;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .safety-dozz-tips-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .safety-dozz-tip-item {
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            background-color: #1B1B1B;
+            border-radius: 8px;
+            position: relative;
+            padding-right: 45px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .safety-dozz-tip-item:hover {
+            background-color: #333333;
+            transform: translateX(-3px);
+        }
+
+        .safety-dozz-tip-item::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.3em;
+        }
+
+        .safety-dozz-tip-highlight {
+            font-weight: bold;
+            color: #E34603;
+        }
+
+        .safety-dozz-parking-rules {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .safety-dozz-parking-item {
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            background-color: #1B1B1B;
+            border-radius: 8px;
+            position: relative;
+            padding-right: 45px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .safety-dozz-parking-item:hover {
+            background-color: #333333;
+            transform: translateX(-3px);
+        }
+
+        .safety-dozz-parking-item::before {
+            content: "🅿️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.3em;
+        }
+
+        .safety-dozz-alert-box {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-right: 5px solid #E34603;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .safety-dozz-alert-box:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 30px rgba(227, 70, 3, 0.3);
+        }
+
+        .safety-dozz-alert-title {
+            font-size: 1.8em;
+            color: #E34603;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .safety-dozz-alert-message {
+            font-size: 1.1em;
+            color: #FFFFFF;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .safety-dozz-footer-area {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #2a2a2a;
+            color: #FFFFFF;
+            opacity: 0.6;
+        }
+
+        .safety-dozz-emoji-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .safety-dozz-main-title {
+                font-size: 2em;
+            }
+
+            .safety-dozz-content-block,
+            .safety-dozz-alert-box {
+                padding: 20px;
+            }
+
+            .safety-dozz-section-heading {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 
 <body>
