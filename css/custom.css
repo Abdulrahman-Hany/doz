@@ -18,6 +18,69 @@
 /*** 	   02. General css		  ***/
 /************************************/
 
+/* Language Toggle Styles */
+.language-toggle {
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.language-toggle.mobile {
+	display: none;
+}
+
+.lang-btn {
+	background: rgba(255, 255, 255, 0.2);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	color: var(--white-color);
+	padding: 8px 15px;
+	border-radius: 25px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.lang-btn:hover {
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	color: var(--white-color);
+	transform: translateY(-2px);
+}
+
+.lang-btn.active {
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	color: var(--white-color);
+}
+
+.header-btn {
+	display: inline-flex;
+	align-items: center;
+}
+
+.btn-default {
+	background: var(--accent-color);
+	color: var(--white-color);
+	padding: 12px 24px;
+	border-radius: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	border: 2px solid var(--accent-color);
+}
+
+.btn-default:hover {
+	background: transparent;
+	color: var(--accent-color);
+	transform: translateY(-2px);
+}
+
 body {
 	position: relative;
 	font-family: "Plus Jakarta Sans", sans-serif;
@@ -372,7 +435,6 @@ body {
 	font-size: 80px;
 	font-weight: 300;
 	line-height: 1.2em;
-	text-transform: uppercase;
 	color: var(--primary-color);
 	margin-bottom: 0;
 	cursor: none;
@@ -4594,7 +4656,6 @@ body:has(.offcanvas) {
 
 .post-content {
 	width: 100%;
-	max-width: 1100px;
 	margin: 0 auto;
 }
 
@@ -8040,4 +8101,155 @@ body:has(.offcanvas) {
 	.features-grid {
 		grid-template-columns: 1fr;
 	}
+}
+
+/************************************/
+/*** 	 HTML direaction	  ***/
+/************************************/
+html:dir(ltr) .main-menu ul li.nav-item a {
+	font-size: 18px;
+	text-align: start;
+}
+
+html:dir(ltr) .section-title h3 {
+	font-size: 20px;
+}
+
+html:dir(ltr) .section-title h1 {
+	font-size: 63px;
+}
+
+html:dir(ltr) .hero-content .section-title p {
+	font-size: 22px;
+}
+
+html:dir(ltr) .btn-default {
+	font-size: 17px;
+}
+
+html:dir(ltr) .scrolling-content span {
+	font-size: 30px;
+}
+
+html:dir(ltr) .about-need-help .icon-box {
+	margin-right: 30px;
+	margin-left: 0px;
+}
+
+html:dir(ltr) .about-need-help {
+	padding: 12px 55px 12px 12px;
+}
+
+html:dir(ltr) .section-title h2 {
+	font-size: 52px;
+}
+
+html:dir(ltr) .main-menu ul li.submenu>a::before {
+	display: none;
+}
+
+html:dir(ltr) .main-menu ul li.submenu>a::after {
+	content: '\f107';
+	font-family: 'FontAwesome';
+	font-weight: 900;
+	font-size: 14px;
+	margin-left: 8px;
+	margin-top: 4px;
+}
+
+html:dir(ltr) .main-menu ul ul li a:hover,
+html:dir(ltr) .main-menu ul ul li a:focus {
+	margin: 0 0px 0 5px;
+}
+
+html:dir(ltr) .lang-btn{
+	margin-right: 15px;
+}
+
+html:dir(ltr) .section-title h3 {
+    padding-right: 0;
+    padding-left: 31px;
+}
+
+html:dir(ltr) .section-title h3::before{
+	left: 0;
+	right: unset;
+}
+
+html:dir(ltr) .section-title p {
+    font-size: 18px;
+}
+
+html:dir(ltr) .why-choose-body ul li {
+    padding-left: 30px;
+    padding-right: 0px;
+}
+html:dir(ltr) .why-choose-body ul li:after{
+	left: 0;
+	right: unset;
+}
+html:dir(ltr) .why-choose-list {
+    border-radius: 0 20px 20px 0;
+}
+html:dir(ltr) .feature-list-content ul li {
+    padding-left: 30px;
+    padding-right: 0px;
+	font-size: 17px;
+}
+html:dir(ltr) .feature-list-content ul li:after {
+	right: unset;
+	left: 0;
+}
+html:dir(ltr) .feature-list-content p {
+    font-size: 15px;
+}
+html:dir(ltr) .tool-item-content h3 {
+    font-size: 20px;
+}
+html:dir(ltr) .testimonial-slider {
+	direction: rtl;
+}
+html:dir(ltr) .faqs-item-content h3 {
+    font-size: 23px;
+}
+html:dir(ltr) .faqs-item-content p:last-child {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+html:dir(ltr) .footer-contact-list ul li img {
+    margin-left: 0;
+    margin-right: 15px;
+
+}
+html:dir(ltr) .footer-links ul li a i {
+    margin-right: 10px;
+    margin-left: 0;
+}
+html:dir(ltr) .safety-DOZz-emoji-icon{
+    margin-bottom: 15px;
+}
+html:dir(ltr) .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+}
+html:dir(ltr) .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-left: 0;
+    padding-right: 3px;
+}
+html:dir(ltr) .page-header-box ol li.breadcrumb-item {
+    padding-right: 0;
+    padding-left: 8;
+}
+html:dir(rtl) .scrolling-ticker-box{
+	direction: ltr;
+}
+html:dir(rtl) .project-rating-counter .icon-box {
+    margin-right: 0;
+    margin-left: 20px;
+}
+html:dir(ltr) .category-title::after {
+    left: 0;
+    right: unset;
+}
+html:dir(ltr)
 }

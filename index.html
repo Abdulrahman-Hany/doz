@@ -63,7 +63,7 @@
 <body>
 
     <!-- Preloader Start -->
-    <div class="preloader">
+    <div class="preloader" id="preloader">
         <div class="loading-container">
             <div class="loading"></div>
             <div id="loading-icon"><img src="images/loader.png" alt=""></div>
@@ -86,119 +86,173 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="./">عن DOZ</a>
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="./" en-lang="About DOZ" ar-lang=" عن DOZ">عن DOZ</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="#benefits"> لماذا DOZ ؟</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#benefits" en-lang="Why DOZ?"
+                                                ar-lang=" لماذا DOZ ؟">
+                                                لماذا DOZ ؟
+                                            </a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="#how-it-works">كيف تعمل الخدمة ؟
-                                            </a></li>
-                                        <li class="nav-item"><a class="nav-link" href="changelog.html">آخر التحديثات
-                                            </a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#how-it-works"
+                                                en-lang="How does the service work?" ar-lang=" كيف تعمل الخدمة ؟">
+                                                كيف تعمل الخدمة ؟
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="changelog.html" en-lang="Latest Updates"
+                                                ar-lang=" آخر التحديثات">
+                                                آخر التحديثات
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="career-role.html">سلامة السكوتر</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.htmls">مميزات التطبيق</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">المصادر</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="#Testimonials">آراء العملاء
-                                            </a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog.html">مدونة DOZ</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#faqs">الأسئلة الشائعة</a></li>
-                                <li class="nav-item"><a class="nav-link" href="franchise.html">امتياز</a></li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link" href="career-role.html" en-lang="Scooter Safety"
+                                        ar-lang=" سلامة السكوتر">
+                                        سلامة السكوتر
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.htmls" en-lang="App Features"
+                                        ar-lang=" مميزات التطبيق">
+                                        مميزات التطبيق
+                                    </a>
+                                </li>
+
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="#" en-lang="Resources" ar-lang=" المصادر">
+                                        المصادر
+                                    </a>
+                                    <ul>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#Testimonials" en-lang="Customer Reviews"
+                                                ar-lang=" آراء العملاء">
+                                                آراء العملاء
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blog.html" en-lang="DOZ Blog" ar-lang=" مدونة DOZ">
+                                                مدونة DOZ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#faqs" en-lang="FAQs" ar-lang=" الأسئلة الشائعة">
+                                        الأسئلة الشائعة
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="franchise.html" en-lang="Franchise" ar-lang=" امتياز">
+                                        امتياز
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
                         <!-- Header Social Box Start -->
                         <div class="header-social-box d-inline-flex">
-                            <!-- Header Social Links Start -->
-                            <div class="header-social-links">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Header Social Links End -->
+                            <div class="language-toggle">
+                                <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">
+                                    <i class="fas fa-globe"></i>
+                                    <span id="langText">EN</span>
+                                </button>
 
-                            <!-- Header Btn Start -->
-                            <div class="header-btn">
-                                <!-- Toggle Button trigger modal Start -->
-                                <button class="btn btn-popup" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
-                                        src="images/header-btn-dot.svg" alt=""></button>
-                                <!-- Toggle Button trigger modal End -->
-
-                                <!-- Header Sidebar Start -->
-                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-
-                                    <div class="offcanvas-body">
-                                        <!-- Header Contact Box Start -->
-                                        <div class="header-contact-box">
-                                            <div class="icon-box">
-                                                <img src="images/icon-phone-accent.svg" alt="">
-                                            </div>
-                                            <div class="header-contact-box-content">
-                                                <h3>الهاتف</h3>
-                                                <p>+968 9765 3339</p>
-                                            </div>
-                                        </div>
-                                        <!-- Header Contact Box End -->
-
-                                        <!-- Header Contact Box Start -->
-                                        <div class="header-contact-box">
-                                            <div class="icon-box">
-                                                <img src="images/icon-mail-accent.svg" alt="">
-                                            </div>
-                                            <div class="header-contact-box-content">
-                                                <h3>البريد الإلكتروني</h3>
-                                                <p>info@DOZ.com</p>
-                                            </div>
-                                        </div>
-                                        <!-- Header Contact Box End -->
-
-                                        <!-- Header Contact Box Start -->
-                                        <div class="header-contact-box">
-                                            <div class="icon-box">
-                                                <img src="images/icon-location-accent.svg" alt="">
-                                            </div>
-                                            <div class="header-contact-box-content">
-                                                <h3>العنوان</h3>
-                                                <p></p>
-                                            </div>
-                                        </div>
-                                        <!-- Header Contact Box End -->
-
-                                        <!-- Header Social Links Start -->
-                                        <div class="header-social-links sidebar-social-links">
-                                            <h3>ابقَ على تواصل</h3>
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- Header Social Links End -->
-                                    </div>
+                                <!-- Header Social Links Start -->
+                                <div class="header-social-links">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
                                 </div>
-                                <!-- Header Sidebar End -->
+                                <!-- Header Social Links End -->
+
+                                <!-- Header Btn Start -->
+                                <div class="header-btn">
+                                    <button class="btn btn-popup" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                        <img src="images/header-btn-dot.svg" alt="">
+                                    </button>
+
+                                    <!-- Header Sidebar Start -->
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+
+                                        <div class="offcanvas-body">
+                                            <!-- Header Contact Box Start -->
+                                            <div class="header-contact-box">
+                                                <div class="icon-box">
+                                                    <img src="images/icon-phone-accent.svg" alt="">
+                                                </div>
+                                                <div class="header-contact-box-content">
+                                                    <h3 en-lang="Phone" ar-lang=" الهاتف">الهاتف</h3>
+                                                    <p>+968 9765 3339</p>
+                                                </div>
+                                            </div>
+                                            <!-- Header Contact Box End -->
+
+                                            <!-- Header Contact Box Start -->
+                                            <div class="header-contact-box">
+                                                <div class="icon-box">
+                                                    <img src="images/icon-mail-accent.svg" alt="">
+                                                </div>
+                                                <div class="header-contact-box-content">
+                                                    <h3 en-lang="Email" ar-lang=" البريد الإلكتروني">البريد الإلكتروني
+                                                    </h3>
+                                                    <p>info@DOZ.com</p>
+                                                </div>
+                                            </div>
+                                            <!-- Header Contact Box End -->
+
+                                            <!-- Header Contact Box Start -->
+                                            <div class="header-contact-box">
+                                                <div class="icon-box">
+                                                    <img src="images/icon-location-accent.svg" alt="">
+                                                </div>
+                                                <div class="header-contact-box-content">
+                                                    <h3 en-lang="Address" ar-lang=" العنوان">العنوان</h3>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <!-- Header Contact Box End -->
+
+                                            <!-- Header Social Links Start -->
+                                            <div class="header-social-links sidebar-social-links">
+                                                <h3 en-lang="Stay Connected" ar-lang=" ابقَ على تواصل">ابقَ على تواصل
+                                                </h3>
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Header Social Links End -->
+                                        </div>
+                                    </div>
+                                    <!-- Header Sidebar End -->
+                                </div>
+                                <!-- Header Btn End -->
                             </div>
-                            <!-- Header Btn End -->
+                            <!-- Header Social Box End -->
                         </div>
-                        <!-- Header Social Box End -->
+                        <!-- Main Menu End -->
+                        <div class="navbar-toggle"></div>
                     </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
-                </div>
             </nav>
             <div class="responsive-menu"></div>
         </div>
     </header>
     <!-- Header End -->
+
 
     <!-- Hero Section Start-->
     <div class="hero bg-image ">
@@ -210,19 +264,30 @@
                 <div class="col-lg-12">
                     <div class="hero-content">
                         <div class="section-title">
-                            <h3 class="wow fadeInUp"> مرحبًا بكم في DOZ</h3>
-                            <h1 data-cursor="-opaque">
+                            <h3 class="wow fadeInUp" en-lang="Welcome to DOZ" ar-lang=" مرحبًا بكم في DOZ">
+                                مرحبًا بكم في DOZ
+                            </h3>
+
+                            <h1 en-lang="Your scooter is always waiting for you " ar-lang="  سكوترك في انتظارك دايمًا">
                                 سكوترك في انتظارك دايمًا
-                                <span> تحرّك بحرية مع DOZ</span>
+                                <span en-lang=" Move freely with DOZ" ar-lang="  تحرّك بحرية مع DOZ ">
+                                    تحرّك بحرية مع DOZ
+                                </span>
                             </h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
+
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"
+                                en-lang="Download the app and book your scooter, and move freely on the road today with ease and safety. Enjoy a unique journey to explore new places and experience amazing adventures."
+                                ar-lang=" حمّل التطبيق و احجز سكوترك، وتنقّل بحرية على الطريق اليوم بكل سهولة وأمان. استمتع برحلة فريدة من نوعها لاستكشاف الأماكن الجديدة وتجربة المغامرات الرائعة.">
                                 حمّل التطبيق و احجز سكوترك، وتنقّل بحرية على الطريق اليوم بكل سهولة وأمان.
                                 استمتع برحلة فريدة من نوعها لاستكشاف الأماكن الجديدة وتجربة المغامرات الرائعة.
                             </p>
                         </div>
+
                         <div class="hero-content-body">
                             <div class="hero-btn wow fadeInUp" data-wow-delay="0.2s">
-                                <a href="contact.html" class="btn-default">استكشف الآن</a>
+                                <a href="contact.html" class="btn-default" en-lang="Explore Now" ar-lang=" استكشف الآن">
+                                    استكشف الآن
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -238,30 +303,63 @@
         <!-- Scrolling Ticker Start -->
         <div class="scrolling-ticker-box" dir="ltr">
             <div class="scrolling-content">
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
+                <span en-lang="Smart Mobility Applications" ar-lang=" تطبيقات التنقّل الذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية
+                </span>
+                <span en-lang="Booking and Scheduling Services" ar-lang=" خدمات الحجز والمواعيد">
+                    <img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد
+                </span>
+                <span en-lang="Customer Service and Support" ar-lang=" خدمة العملاء والدعم">
+                    <img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم
+                </span>
+                <span en-lang="Smart Analytics and Insights" ar-lang=" تحليلات ورؤى ذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية
+                </span>
+                <span en-lang="Smart Mobility Applications" ar-lang=" تطبيقات التنقّل الذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية
+                </span>
+                <span en-lang="Booking and Scheduling Services" ar-lang=" خدمات الحجز والمواعيد">
+                    <img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد
+                </span>
+                <span en-lang="Customer Service and Support" ar-lang=" خدمة العملاء والدعم">
+                    <img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم
+                </span>
+                <span en-lang="Smart Analytics and Insights" ar-lang=" تحليلات ورؤى ذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية
+                </span>
             </div>
 
             <div class="scrolling-content">
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
+                <span en-lang="Smart Mobility Applications" ar-lang=" تطبيقات التنقّل الذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية
+                </span>
+                <span en-lang="Booking and Scheduling Services" ar-lang=" خدمات الحجز والمواعيد">
+                    <img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد
+                </span>
+                <span en-lang="Customer Service and Support" ar-lang=" خدمة العملاء والدعم">
+                    <img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم
+                </span>
+                <span en-lang="Smart Analytics and Insights" ar-lang=" تحليلات ورؤى ذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية
+                </span>
+                <span en-lang="Smart Mobility Applications" ar-lang=" تطبيقات التنقّل الذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية
+                </span>
+                <span en-lang="Booking and Scheduling Services" ar-lang=" خدمات الحجز والمواعيد">
+                    <img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد
+                </span>
+                <span en-lang="Customer Service and Support" ar-lang=" خدمة العملاء والدعم">
+                    <img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم
+                </span>
+                <span en-lang="Smart Analytics and Insights" ar-lang=" تحليلات ورؤى ذكية">
+                    <img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية
+                </span>
             </div>
         </div>
         <!-- Scrolling Ticker End -->
     </div>
     <!-- Scrolling Ticker Section End -->
+
 
 
     <!-- About Us Section Start -->
@@ -288,8 +386,14 @@
                                 <img src="images/icon-phone-dark.svg" alt="">
                             </div>
                             <div class="need-help-content">
-                                <p>هل تحتاج مساعدة؟</p>
-                                <h3><a href="#">الدعم الفني المباشر</a></h3>
+                                <p en-lang="Need help?" ar-lang=" هل تحتاج مساعدة؟">
+                                    هل تحتاج مساعدة؟
+                                </p>
+                                <h3>
+                                    <a href="#" en-lang="Live Technical Support" ar-lang=" الدعم الفني المباشر">
+                                        الدعم الفني المباشر
+                                    </a>
+                                </h3>
                             </div>
                         </div>
                         <!-- About Need Help Box End -->
@@ -302,11 +406,20 @@
                     <div class="about-us-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">عن DOZ</h3>
-                            <h2 data-cursor="-opaque">
-                                التنقّل العصري يبدأ <span>من هنا</span>
+                            <h3 class="wow fadeInUp" en-lang="About DOZ" ar-lang=" عن DOZ">
+                                عن DOZ
+                            </h3>
+
+                            <h2 data-cursor="-opaque" en-lang="Modern mobility starts" ar-lang=" التنقّل العصري يبدأ">
+                                التنقّل العصري يبدأ
+                                <span en-lang="from here" ar-lang="  من هنا">
+                                    من هنا
+                                </span>
                             </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
+
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"
+                                en-lang="DOZ offers an innovative urban mobility experience in the Sultanate of Oman. Through a smart app, you can locate the nearest scooter, unlock it, and ride easily and quickly."
+                                ar-lang=" تقدّم DOZ تجربة تنقّل حضري مبتكرة داخل سلطنة عُمان. من خلال تطبيق ذكي، يمكنك تحديد أقرب سكوتر، فتحه، والانطلاق بكل سهولة وسرعة.">
                                 تقدّم DOZ تجربة تنقّل حضري مبتكرة داخل سلطنة عُمان. من خلال تطبيق ذكي،
                                 يمكنك تحديد أقرب سكوتر، فتحه، والانطلاق بكل سهولة وسرعة.
                             </p>
@@ -318,21 +431,27 @@
                             <!-- About Counter Item Start -->
                             <div class="about-counter-item">
                                 <h2><span class="counter">10000</span>+</h2>
-                                <p>مستخدم في عُمان</p>
+                                <p en-lang="Users in Oman" ar-lang=" مستخدم في عُمان">
+                                    مستخدم في عُمان
+                                </p>
                             </div>
                             <!-- About Counter Item End -->
 
                             <!-- About Counter Item Start -->
                             <div class="about-counter-item">
                                 <h2><span class="counter">98</span>%</h2>
-                                <p>مستخدمون راضون</p>
+                                <p en-lang="Satisfied users" ar-lang=" مستخدمون راضون">
+                                    مستخدمون راضون
+                                </p>
                             </div>
                             <!-- About Counter Item End -->
 
                             <!-- About Counter Item Start -->
                             <div class="about-counter-item">
                                 <h2><span class="counter">4.8</span></h2>
-                                <p>تقييم التطبيق</p>
+                                <p en-lang="App rating" ar-lang=" تقييم التطبيق">
+                                    تقييم التطبيق
+                                </p>
                             </div>
                             <!-- About Counter Item End -->
                         </div>
@@ -340,7 +459,10 @@
 
                         <!-- About Us Button Start -->
                         <div class="about-us-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="#download-app" class="btn-default">حمّل التطبيق</a>
+                            <a href="#download-app" class="btn-default" en-lang="Download the App"
+                                ar-lang=" حمّل التطبيق">
+                                حمّل التطبيق
+                            </a>
                         </div>
                         <!-- About Us Button End -->
                     </div>
@@ -352,6 +474,7 @@
     <!-- About Us Section End -->
 
 
+
     <!-- Our Service Section Start -->
     <div class="our-services" id="features">
         <div class="container">
@@ -359,9 +482,15 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">مميزات التطبيق</h3>
-                        <h2 data-cursor="-opaque">
-                            كل ما تحتاجه <span>للتنقّل</span> بسهولة
+                        <h3 class="wow fadeInUp" en-lang="App Features" ar-lang=" مميزات التطبيق">
+                            مميزات التطبيق
+                        </h3>
+
+                        <h2 data-cursor="-opaque" en-lang="Everything you need" ar-lang=" كل ما تحتاجه">
+                            كل ما تحتاجه
+                            <span en-lang="for easy mobility" ar-lang="  للتنقّل">
+                                للتنقّل
+                            </span>
                         </h2>
                     </div>
                     <!-- Section Title End -->
@@ -375,8 +504,15 @@
                             <img src="images/icon-service-item-1.svg" alt="">
                         </div>
                         <div class="service-content">
-                            <h3><a href="contact.html">سهولة الحجز</a></h3>
-                            <p>احجز السكوتر في ثوانٍ من خلال التطبيق وابدأ رحلتك فورًا.</p>
+                            <h3>
+                                <a href="contact.html" en-lang="Easy Booking" ar-lang=" سهولة الحجز">
+                                    سهولة الحجز
+                                </a>
+                            </h3>
+                            <p en-lang="Book the scooter in seconds through the app and start your trip immediately."
+                                ar-lang=" احجز السكوتر في ثوانٍ من خلال التطبيق وابدأ رحلتك فورًا.">
+                                احجز السكوتر في ثوانٍ من خلال التطبيق وابدأ رحلتك فورًا.
+                            </p>
                         </div>
                         <div class="service-btn">
                             <a href="contact.html"><img src="images/arrow-dark.svg" alt=""></a>
@@ -390,8 +526,15 @@
                             <img src="images/icon-service-item-2.svg" alt="">
                         </div>
                         <div class="service-content">
-                            <h3><a href="contact.html">موقع لحظي</a></h3>
-                            <p>تعرّف على أقرب سكوتر ليك من خلال الخريطة بتحديث مباشر.</p>
+                            <h3>
+                                <a href="contact.html" en-lang="Real-Time Location" ar-lang=" موقع لحظي">
+                                    موقع لحظي
+                                </a>
+                            </h3>
+                            <p en-lang="See the nearest scooter to you through the map with live updates."
+                                ar-lang=" تعرّف على أقرب سكوتر ليك من خلال الخريطة بتحديث مباشر.">
+                                تعرّف على أقرب سكوتر ليك من خلال الخريطة بتحديث مباشر.
+                            </p>
                         </div>
                         <div class="service-btn">
                             <a href="contact.html"><img src="images/arrow-dark.svg" alt=""></a>
@@ -405,8 +548,15 @@
                             <img src="images/icon-service-item-3.svg" alt="">
                         </div>
                         <div class="service-content">
-                            <h3><a href="contact.html">خيارات متعددة</a></h3>
-                            <p>أنواع مختلفة من السكوترات تناسب كل مشوار وكل احتياج.</p>
+                            <h3>
+                                <a href="contact.html" en-lang="Multiple Options" ar-lang=" خيارات متعددة">
+                                    خيارات متعددة
+                                </a>
+                            </h3>
+                            <p en-lang="Different types of scooters suitable for every trip and need."
+                                ar-lang=" أنواع مختلفة من السكوترات تناسب كل مشوار وكل احتياج.">
+                                أنواع مختلفة من السكوترات تناسب كل مشوار وكل احتياج.
+                            </p>
                         </div>
                         <div class="service-btn">
                             <a href="contact.html"><img src="images/arrow-dark.svg" alt=""></a>
@@ -420,8 +570,15 @@
                             <img src="images/icon-service-item-4.svg" alt="">
                         </div>
                         <div class="service-content">
-                            <h3><a href="contact.html">تحكّم كامل</a></h3>
-                            <p>تتبّع الرحلة، اعرف الوقت والتكلفة، وانهِ المشوار بسهولة.</p>
+                            <h3>
+                                <a href="contact.html" en-lang="Full Control" ar-lang=" تحكّم كامل">
+                                    تحكّم كامل
+                                </a>
+                            </h3>
+                            <p en-lang="Track your trip, know the time and cost, and complete your journey easily."
+                                ar-lang=" تتبّع الرحلة، اعرف الوقت والتكلفة، وانهِ المشوار بسهولة.">
+                                تتبّع الرحلة، اعرف الوقت والتكلفة، وانهِ المشوار بسهولة.
+                            </p>
                         </div>
                         <div class="service-btn">
                             <a href="contact.html"><img src="images/arrow-dark.svg" alt=""></a>
@@ -435,8 +592,15 @@
                             <img src="images/icon-service-item-5.svg" alt="">
                         </div>
                         <div class="service-content">
-                            <h3><a href="contact.html">تنقّل صديق للبيئة</a></h3>
-                            <p>حل تنقّل عصري واقتصادي يساعد في تقليل الازدحام والانبعاثات.</p>
+                            <h3>
+                                <a href="contact.html" en-lang="Eco-Friendly Mobility" ar-lang=" تنقّل صديق للبيئة">
+                                    تنقّل صديق للبيئة
+                                </a>
+                            </h3>
+                            <p en-lang="A modern and economical mobility solution that helps reduce congestion and emissions."
+                                ar-lang=" حل تنقّل عصري واقتصادي يساعد في تقليل الازدحام والانبعاثات.">
+                                حل تنقّل عصري واقتصادي يساعد في تقليل الازدحام والانبعاثات.
+                            </p>
                         </div>
                         <div class="service-btn">
                             <a href="contact.html"><img src="images/arrow-dark.svg" alt=""></a>
@@ -450,8 +614,15 @@
                             <img src="images/icon-service-item-6.svg" alt="">
                         </div>
                         <div class="service-content">
-                            <h3><a href="contact.html">دعم فني مباشر</a></h3>
-                            <p>فريق دعم جاهز لمساعدتك في أي وقت لضمان تجربة مريحة وآمنة.</p>
+                            <h3>
+                                <a href="contact.html" en-lang="Live Technical Support" ar-lang=" دعم فني مباشر">
+                                    دعم فني مباشر
+                                </a>
+                            </h3>
+                            <p en-lang="A support team ready to assist you anytime for a smooth and safe experience."
+                                ar-lang=" فريق دعم جاهز لمساعدتك في أي وقت لضمان تجربة مريحة وآمنة.">
+                                فريق دعم جاهز لمساعدتك في أي وقت لضمان تجربة مريحة وآمنة.
+                            </p>
                         </div>
                         <div class="service-btn">
                             <a href="contact.html"><img src="images/arrow-dark.svg" alt=""></a>
@@ -461,10 +632,14 @@
 
                 <div class="col-lg-12">
                     <div class="service-footer wow fadeInUp" data-wow-delay="1.2s">
-                        <p dir="rtl">
-                            <span>رحلتك الأولى مجانًا</span>
+                        <p dir="rtl" en-lang="Download the DOZ app and start smart navigation now."
+                            ar-lang="  حمّل تطبيق DOZ وابدأ التنقّل الذكي الآن">
+                            <span en-lang="Your first ride is free" ar-lang=" رحلتك الأولى مجانًا">رحلتك الأولى
+                                مجانًا</span>
                             حمّل تطبيق DOZ وابدأ التنقّل الذكي الآن.
-                            <a href="contact.html">تحميل التطبيق</a>
+                            <a href="contact.html" en-lang="Download the App" ar-lang="  تحميل التطبيق">
+                                تحميل التطبيق
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -472,6 +647,7 @@
         </div>
     </div>
     <!-- Our Service Section End -->
+
 
 
     <!-- Why Choose Us Section Start -->
@@ -485,11 +661,20 @@
                         <div class="why-choose-us-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h3 class="wow fadeInUp">لماذا DOZ؟</h3>
-                                <h2 data-cursor="-opaque">
-                                    تنقّل ذكي <span>أسهل وأسرع</span>
+                                <h3 class="wow fadeInUp" en-lang="Why DOZ?" ar-lang=" لماذا DOZ؟">
+                                    لماذا DOZ؟
+                                </h3>
+
+                                <h2 data-cursor="-opaque" en-lang="Smart mobility" ar-lang="  تنقّل ذكي ">
+                                    تنقّل ذكي
+                                    <span en-lang=" Easier and Faster" ar-lang=" أسهل وأسرع ">
+                                        أسهل وأسرع
+                                    </span>
                                 </h2>
-                                <p class="wow fadeInUp" data-wow-delay="0.2s">
+
+                                <p class="wow fadeInUp" data-wow-delay="0.2s"
+                                    en-lang="DOZ provides you with a modern urban mobility experience, combining ease, safety, and flexibility to reach your destination effortlessly."
+                                    ar-lang=" DOZ توفّر لك تجربة تنقّل حضري حديثة، تجمع بين السهولة، الأمان، والمرونة لتصل إلى وجهتك بدون عناء.">
                                     DOZ توفّر لك تجربة تنقّل حضري حديثة، تجمع بين السهولة،
                                     الأمان، والمرونة لتصل إلى وجهتك بدون عناء.
                                 </p>
@@ -499,15 +684,20 @@
                             <!-- Why Choose Body Start -->
                             <div class="why-choose-body wow fadeInUp" data-wow-delay="0.4s">
                                 <ul>
-                                    <li>بدون زحام أو انتظار</li>
-                                    <li>تحكّم كامل من خلال تطبيق واحد</li>
+                                    <li en-lang="No crowd or waiting" ar-lang=" بدون زحام أو انتظار">بدون زحام أو انتظار
+                                    </li>
+                                    <li en-lang="Full control through a single app"
+                                        ar-lang=" تحكّم كامل من خلال تطبيق واحد">تحكّم كامل من خلال تطبيق واحد</li>
                                 </ul>
                             </div>
                             <!-- Why Choose Body End -->
 
                             <!-- Why Choose Button Start -->
                             <div class="why-choose-btn wow fadeInUp" data-wow-delay="0.6s">
-                                <a href="contact.html" class="btn-default">حمّل التطبيق</a>
+                                <a href="contact.html" class="btn-default" en-lang="Download the App"
+                                    ar-lang=" حمّل التطبيق">
+                                    حمّل التطبيق
+                                </a>
                             </div>
                             <!-- Why Choose Button End -->
                         </div>
@@ -525,22 +715,31 @@
                             <div class="why-choose-list">
                                 <!-- Why Choose List Item Start -->
                                 <div class="why-choose-list-item wow fadeInUp">
-                                    <h3>سهولة الاستخدام</h3>
-                                    <p>واجهة بسيطة تتيح لك حجز وفتح السكوتر بخطوات قليلة.</p>
+                                    <h3 en-lang="Ease of Use" ar-lang=" سهولة الاستخدام">سهولة الاستخدام</h3>
+                                    <p en-lang="A simple interface lets you book and unlock the scooter in a few steps."
+                                        ar-lang=" واجهة بسيطة تتيح لك حجز وفتح السكوتر بخطوات قليلة.">
+                                        واجهة بسيطة تتيح لك حجز وفتح السكوتر بخطوات قليلة.
+                                    </p>
                                 </div>
                                 <!-- Why Choose List Item End -->
 
                                 <!-- Why Choose List Item Start -->
                                 <div class="why-choose-list-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <h3>توفر دائم</h3>
-                                    <p>سكوترات متاحة في مواقع متعددة لتبدأ رحلتك في أي وقت.</p>
+                                    <h3 en-lang="Always Available" ar-lang=" توفر دائم">توفر دائم</h3>
+                                    <p en-lang="Scooters are available at multiple locations so you can start your journey anytime."
+                                        ar-lang=" سكوترات متاحة في مواقع متعددة لتبدأ رحلتك في أي وقت.">
+                                        سكوترات متاحة في مواقع متعددة لتبدأ رحلتك في أي وقت.
+                                    </p>
                                 </div>
                                 <!-- Why Choose List Item End -->
 
                                 <!-- Why Choose List Item Start -->
                                 <div class="why-choose-list-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <h3>آمن وصديق للبيئة</h3>
-                                    <p>تنقّل نظيف وآمن مع نظام تتبع وصيانة دورية.</p>
+                                    <h3 en-lang="Safe and Eco-Friendly" ar-lang=" آمن وصديق للبيئة">آمن وصديق للبيئة</h3>
+                                    <p en-lang="Clean and safe mobility with a tracking system and regular maintenance."
+                                        ar-lang=" تنقّل نظيف وآمن مع نظام تتبع وصيانة دورية.">
+                                        تنقّل نظيف وآمن مع نظام تتبع وصيانة دورية.
+                                    </p>
                                 </div>
                                 <!-- Why Choose List Item End -->
                             </div>
@@ -555,6 +754,7 @@
     </div>
     <!-- Why Choose Us Section End -->
 
+
     <!-- Our Project Section Start -->
     <div class="our-project">
         <div class="container">
@@ -562,9 +762,16 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">تجربة DOZ</h3>
-                        <h2 data-cursor="-opaque">
-                            استكشف <span>رحلة التنقّل</span> مع DOZ
+                        <h3 class="wow fadeInUp" en-lang="DOZ Experience" ar-lang=" تجربة DOZ">
+                            تجربة DOZ
+                        </h3>
+
+                        <h2 data-cursor="-opaque" en-lang="Explore the " ar-lang=" استكشف">
+                            استكشف
+                            <span en-lang="journey of mobility" ar-lang= " رحلة التنقّل ">
+                                رحلة التنقّل
+                            </span>
+                            DOZ
                         </h2>
                     </div>
                     <!-- Section Title End -->
@@ -576,12 +783,24 @@
                     <!-- Choose Our Project Nav start -->
                     <div class="our-Project-nav wow fadeInUp" data-wow-delay="0.2s">
                         <ul>
-                            <li><a href="#" class="active-btn" data-filter="*">الكل</a></li>
-                            <li><a href="#" data-filter=".websites">التطبيق</a></li>
-                            <li><a href="#" data-filter=".illustrations">التجربة</a></li>
-                            <li><a href="#" data-filter=".branding">المدن</a></li>
-                            <li><a href="#" data-filter=".packaging">الاستخدام</a></li>
-                            <li><a href="#" data-filter=".logos">المزايا</a></li>
+                            <li><a href="#" class="active-btn" data-filter="*" en-lang="All" ar-lang=" الكل">
+                                    الكل
+                                </a></li>
+                            <li><a href="#" data-filter=".websites" en-lang="App" ar-lang=" التطبيق">
+                                    التطبيق
+                                </a></li>
+                            <li><a href="#" data-filter=".illustrations" en-lang="Experience" ar-lang=" التجربة">
+                                    التجربة
+                                </a></li>
+                            <li><a href="#" data-filter=".branding" en-lang="Cities" ar-lang=" المدن">
+                                    المدن
+                                </a></li>
+                            <li><a href="#" data-filter=".packaging" en-lang="Usage" ar-lang=" الاستخدام">
+                                    الاستخدام
+                                </a></li>
+                            <li><a href="#" data-filter=".logos" en-lang="Features" ar-lang=" المزايا">
+                                    المزايا
+                                </a></li>
                         </ul>
                     </div>
                     <!-- Choose Our Project Nav End -->
@@ -604,8 +823,13 @@
                                     </div>
                                 </div>
                                 <div class="project-content">
-                                    <p>التطبيق</p>
-                                    <h3><a href="project-websites.html">واجهة استخدام سهلة وسريعة</a></h3>
+                                    <p en-lang="App" ar-lang=" التطبيق">التطبيق</p>
+                                    <h3>
+                                        <a href="project-websites.html" en-lang="Easy and Fast User Interface"
+                                            ar-lang=" واجهة استخدام سهلة وسريعة">
+                                            واجهة استخدام سهلة وسريعة
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -623,8 +847,14 @@
                                     </div>
                                 </div>
                                 <div class="project-content">
-                                    <p>التجربة</p>
-                                    <h3><a href="project-illustrations.html">رحلة تنقّل سلسة من البداية للنهاية</a></h3>
+                                    <p en-lang="Experience" ar-lang=" التجربة">التجربة</p>
+                                    <h3>
+                                        <a href="project-illustrations.html"
+                                            en-lang="Smooth mobility journey from start to finish"
+                                            ar-lang=" رحلة تنقّل سلسة من البداية للنهاية">
+                                            رحلة تنقّل سلسة من البداية للنهاية
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -642,8 +872,14 @@
                                     </div>
                                 </div>
                                 <div class="project-content">
-                                    <p>الاستخدام</p>
-                                    <h3><a href="project-packaging.html">ابدأ، تنقّل، وأنهِ الرحلة بسهولة</a></h3>
+                                    <p en-lang="Usage" ar-lang=" الاستخدام">الاستخدام</p>
+                                    <h3>
+                                        <a href="project-packaging.html"
+                                            en-lang="Start, move, and complete the trip easily"
+                                            ar-lang=" ابدأ، تنقّل، وأنهِ الرحلة بسهولة">
+                                            ابدأ، تنقّل، وأنهِ الرحلة بسهولة
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -661,8 +897,13 @@
                                     </div>
                                 </div>
                                 <div class="project-content">
-                                    <p>المدن</p>
-                                    <h3><a href="project-branding.html">توفّر الخدمة في عدة مدن</a></h3>
+                                    <p en-lang="Cities" ar-lang=" المدن">المدن</p>
+                                    <h3>
+                                        <a href="project-branding.html" en-lang="Service available in multiple cities"
+                                            ar-lang=" توفّر الخدمة في عدة مدن">
+                                            توفّر الخدمة في عدة مدن
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -680,8 +921,13 @@
                                     </div>
                                 </div>
                                 <div class="project-content">
-                                    <p>المزايا</p>
-                                    <h3><a href="project-logos.html">تنقّل ذكي وآمن وصديق للبيئة</a></h3>
+                                    <p en-lang="Features" ar-lang=" المزايا">المزايا</p>
+                                    <h3>
+                                        <a href="project-logos.html" en-lang="Smart, safe, and eco-friendly mobility"
+                                            ar-lang=" تنقّل ذكي وآمن وصديق للبيئة">
+                                            تنقّل ذكي وآمن وصديق للبيئة
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -699,8 +945,14 @@
                                     </div>
                                 </div>
                                 <div class="project-content">
-                                    <p>التجربة</p>
-                                    <h3><a href="project-illustrations-2.html">تنقّل حضري يناسب أسلوب حياتك</a></h3>
+                                    <p en-lang="Experience" ar-lang=" التجربة">التجربة</p>
+                                    <h3>
+                                        <a href="project-illustrations-2.html"
+                                            en-lang="Urban mobility suitable for your lifestyle"
+                                            ar-lang=" تنقّل حضري يناسب أسلوب حياتك">
+                                            تنقّل حضري يناسب أسلوب حياتك
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -713,6 +965,7 @@
     </div>
     <!-- Our Project Section End -->
 
+
     <!-- Our Feature Section Start -->
     <div class="our-feature" id="feature">
         <div class="container">
@@ -722,11 +975,21 @@
                     <div class="our-feature-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">مميزات التطبيق</h3>
-                            <h2 data-cursor="-opaque">
-                                كل ما يجعل <span>تنقّلك أسهل</span>
+                            <h3 class="wow fadeInUp" en-lang="App Features" ar-lang=" مميزات التطبيق">
+                                مميزات التطبيق
+                            </h3>
+
+                            <h2 data-cursor="-opaque" en-lang="Everything to make "
+                                ar-lang=" كل ما يجعل">
+                                كل ما يجعل
+                                <span en-lang="your mobility easier" ar-lang=" تنقّلك أسهل">
+                                    تنقّلك أسهل
+                                </span>
                             </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
+
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"
+                                en-lang="DOZ app is designed to provide a smart and smooth mobility experience, from booking to the end of your trip."
+                                ar-lang=" تطبيق DOZ مصمّم ليمنحك تجربة تنقّل ذكية وسلسة، من لحظة الحجز وحتى نهاية رحلتك.">
                                 تطبيق DOZ مصمّم ليمنحك تجربة تنقّل ذكية وسلسة، من لحظة الحجز
                                 وحتى نهاية رحلتك.
                             </p>
@@ -756,7 +1019,7 @@
                                 <img src="images/icon-feature-1.svg" alt="">
                             </div>
                             <div class="feature-item-content">
-                                <h3>سهولة الاستخدام</h3>
+                                <h3 en-lang="Ease of Use" ar-lang=" سهولة الاستخدام">سهولة الاستخدام</h3>
                             </div>
                         </div>
                         <!-- Feature Item End -->
@@ -767,7 +1030,7 @@
                                 <img src="images/icon-feature-2.svg" alt="">
                             </div>
                             <div class="feature-item-content">
-                                <h3>تتبّع لحظي</h3>
+                                <h3 en-lang="Real-Time Tracking" ar-lang=" تتبّع لحظي">تتبّع لحظي</h3>
                             </div>
                         </div>
                         <!-- Feature Item End -->
@@ -778,18 +1041,30 @@
                                 <img src="images/icon-feature-3.svg" alt="">
                             </div>
                             <div class="feature-item-content">
-                                <h3>جاهزية في أي وقت</h3>
+                                <h3 en-lang="Available Anytime" ar-lang=" جاهزية في أي وقت">جاهزية في أي وقت</h3>
                             </div>
                         </div>
                         <!-- Feature Item End -->
 
                         <!-- Feature List Content Start -->
                         <div class="feature-list-content wow fadeInUp" data-wow-delay="0.6s">
-                            <p>مميزات ذكية تساعدك على التنقّل بثقة وراحة.</p>
+                            <p en-lang="Smart features to move with confidence and comfort"
+                                ar-lang=" مميزات ذكية تساعدك على التنقّل بثقة وراحة">
+                                مميزات ذكية تساعدك على التنقّل بثقة وراحة.
+                            </p>
                             <ul>
-                                <li>حجز وفتح السكوتر بخطوات بسيطة</li>
-                                <li>معرفة الوقت والتكلفة أثناء الرحلة</li>
-                                <li>إيقاف السكوتر في مواقع مخصّصة بسهولة</li>
+                                <li en-lang="Book and unlock the scooter in a few steps"
+                                    ar-lang=" حجز وفتح السكوتر بخطوات بسيطة">
+                                    حجز وفتح السكوتر بخطوات بسيطة
+                                </li>
+                                <li en-lang="Know the time and cost during the trip"
+                                    ar-lang=" معرفة الوقت والتكلفة أثناء الرحلة">
+                                    معرفة الوقت والتكلفة أثناء الرحلة
+                                </li>
+                                <li en-lang="Park the scooter in designated areas easily"
+                                    ar-lang=" إيقاف السكوتر في مواقع مخصّصة بسهولة">
+                                    إيقاف السكوتر في مواقع مخصّصة بسهولة
+                                </li>
                             </ul>
                         </div>
                         <!-- Feature List Content End -->
@@ -802,6 +1077,7 @@
     </div>
     <!-- Our Feature Section End -->
 
+
     <!-- Our Tools Section Start -->
     <div class="our-tools">
         <div class="container">
@@ -809,9 +1085,11 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">تقنيات DOZ</h3>
-                        <h2 data-cursor="-opaque">
-                            تجربة ذكية مدعومة <span>بأحدث التقنيات</span>
+                        <h3 class="wow fadeInUp" en-lang="DOZ Technologies" ar-lang=" تقنيات DOZ">تقنيات DOZ</h3>
+                        <h2 data-cursor="-opaque" en-lang="A smart experience powered "
+                            ar-lang=" تجربة ذكية مدعومة">
+                            تجربة ذكية مدعومة
+                            <span en-lang="by the latest technologies" ar-lang=" بأحدث التقنيات">بأحدث التقنيات</span>
                         </h2>
                     </div>
                     <!-- Section Title End -->
@@ -830,8 +1108,11 @@
 
                         <!-- Tool Content Start -->
                         <div class="tool-item-content">
-                            <h3>نظام تحديد المواقع</h3>
-                            <p>تحديد موقع السكوتر بدقة وسهولة في أي وقت.</p>
+                            <h3 en-lang="GPS System" ar-lang=" نظام تحديد المواقع">نظام تحديد المواقع</h3>
+                            <p en-lang="Locate your scooter accurately and easily anytime"
+                                ar-lang=" تحديد موقع السكوتر بدقة وسهولة في أي وقت">
+                                تحديد موقع السكوتر بدقة وسهولة في أي وقت.
+                            </p>
                         </div>
                         <!-- Tool Content End -->
                     </div>
@@ -849,8 +1130,11 @@
 
                         <!-- Tool Content Start -->
                         <div class="tool-item-content">
-                            <h3>تتبّع الرحلة</h3>
-                            <p>متابعة رحلتك لحظة بلحظة مع عرض الوقت والتكلفة.</p>
+                            <h3 en-lang="Trip Tracking" ar-lang=" تتبّع الرحلة">تتبّع الرحلة</h3>
+                            <p en-lang="Track your trip moment by moment with time and cost display"
+                                ar-lang=" متابعة رحلتك لحظة بلحظة مع عرض الوقت والتكلفة">
+                                متابعة رحلتك لحظة بلحظة مع عرض الوقت والتكلفة.
+                            </p>
                         </div>
                         <!-- Tool Content End -->
                     </div>
@@ -868,8 +1152,11 @@
 
                         <!-- Tool Content Start -->
                         <div class="tool-item-content">
-                            <h3>نظام أمان ذكي</h3>
-                            <p>تشغيل وإيقاف آمن يضمن لك تجربة استخدام موثوقة.</p>
+                            <h3 en-lang="Smart Safety System" ar-lang=" نظام أمان ذكي">نظام أمان ذكي</h3>
+                            <p en-lang="Safe on/off operation ensures a reliable user experience"
+                                ar-lang=" تشغيل وإيقاف آمن يضمن لك تجربة استخدام موثوقة">
+                                تشغيل وإيقاف آمن يضمن لك تجربة استخدام موثوقة.
+                            </p>
                         </div>
                         <!-- Tool Content End -->
                     </div>
@@ -879,6 +1166,7 @@
         </div>
     </div>
     <!-- Our Tools Section End -->
+
 
     <!-- Our Expertise Section Start -->
     <div class="our-expertise">
@@ -920,14 +1208,16 @@
                                     </figure>
                                 </div>
                                 <div class="satisfy-client-image add-more">
-                                    <p><span class="counter">15</span>K+</p>
+                                    <p><span class="counter" en-lang="15" ar-lang=" 15">15</span>K+</p>
                                 </div>
                             </div>
                             <!-- Satisfy Client Images End -->
 
                             <!-- Satisfy Client Content Start -->
                             <div class="satisfy-client-content">
-                                <p><span class="counter">500</span>+ رحلة ناجحة يوميًا</p>
+                                <p en-lang="+ successful trips daily" ar-lang=" 500+ رحلة ناجحة يوميًا">
+                                    <span class="counter">500</span>+ رحلة ناجحة يوميًا
+                                </p>
                             </div>
                             <!-- Satisfy Client Content End -->
                         </div>
@@ -935,7 +1225,7 @@
 
                         <!-- Expertise CTA Box Start -->
                         <div class="expertise-contact-box">
-                            <a href="tel:+123456789">
+                            <a href="tel:+123456789" en-lang="DOZ support available 24/7" ar-lang=" دعم DOZ متاح 24/7">
                                 <img src="images/icon-phone-dark.svg" alt="">
                                 دعم DOZ متاح 24/7
                             </a>
@@ -950,11 +1240,17 @@
                     <div class="our-expertise-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">خبرة DOZ</h3>
-                            <h2 data-cursor="-opaque">
-                                نطوّر <span>تجربة تنقّل</span> ذكية وآمنة
+                            <h3 class="wow fadeInUp" en-lang="DOZ Expertise" ar-lang=" خبرة DOZ">خبرة DOZ</h3>
+                            <h2 data-cursor="-opaque" en-lang="We develop a smart and safe "
+                                ar-lang=" نطوّر تجربة تنقّل ذكية وآمنة">
+                                نطوّر
+                                <span en-lang="mobility experience Smart and safe" ar-lang=" تجربة تنقّل">تجربة تنقّل
+                                    ذكية وآمنة</span>
+
                             </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
+                            <p class="wow fadeInUp" data-wow-delay="0.2s"
+                                en-lang="We combine technology, safety, and user experience to provide modern mobility solutions for urban needs."
+                                ar-lang=" نجمع بين التكنولوجيا، الأمان، وتجربة المستخدم لنقدّم حلول تنقّل حديثة تلبّي احتياجات المدن العصرية.">
                                 نجمع بين التكنولوجيا، الأمان، وتجربة المستخدم لنقدّم حلول تنقّل
                                 حديثة تلبّي احتياجات المدن العصرية.
                             </p>
@@ -968,7 +1264,8 @@
                                 <!-- Skill Item Start -->
                                 <div class="skillbar" data-percent="92%">
                                     <div class="skill-data">
-                                        <div class="skill-title">تجربة المستخدم:</div>
+                                        <div class="skill-title" en-lang="User Experience:" ar-lang=" تجربة المستخدم:">
+                                            تجربة المستخدم:</div>
                                         <div class="skill-no">92%</div>
                                     </div>
                                     <div class="skill-progress">
@@ -984,7 +1281,8 @@
                                 <!-- Skill Item Start -->
                                 <div class="skillbar" data-percent="96%">
                                     <div class="skill-data">
-                                        <div class="skill-title">الأمان والاعتمادية:</div>
+                                        <div class="skill-title" en-lang="Safety & Reliability:"
+                                            ar-lang=" الأمان والاعتمادية:">الأمان والاعتمادية:</div>
                                         <div class="skill-no">96%</div>
                                     </div>
                                     <div class="skill-progress">
@@ -1011,9 +1309,13 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">آلية العمل</h3>
-                        <h2 data-cursor="-opaque">
-                            خطوات ذكية <span>لتجربة تنقّل</span> أسهل وأسرع
+                        <h3 class="wow fadeInUp" en-lang="How It Works" ar-lang=" آلية العمل">آلية العمل</h3>
+                        <h2 data-cursor="-opaque" en-lang="Smart steps for an easier and faster mobility experience "
+                            ar-lang=" خطوات ذكية لتجربة تنقّل أسهل وأسرع">
+                            خطوات ذكية
+                            <span en-lang="for a mobility experience Easier and faster"
+                                ar-lang=" لتجربة تنقّل أسهل وأسرع">لتجربة تنقّل</span>
+
                         </h2>
                     </div>
                     <!-- Section Title End -->
@@ -1028,8 +1330,11 @@
                             <h2>01</h2>
                         </div>
                         <div class="working-step-content">
-                            <h3>تحديد الوجهة</h3>
-                            <p>حدّد موقعك ووجهتك بسهولة من خلال تطبيق DOZ خلال ثوانٍ.</p>
+                            <h3 en-lang="Set Destination" ar-lang=" تحديد الوجهة">تحديد الوجهة</h3>
+                            <p en-lang="Easily set your location and destination within seconds via the DOZ app"
+                                ar-lang=" حدّد موقعك ووجهتك بسهولة من خلال تطبيق DOZ خلال ثوانٍ">
+                                حدّد موقعك ووجهتك بسهولة من خلال تطبيق DOZ خلال ثوانٍ.
+                            </p>
                         </div>
                     </div>
                     <!-- Process Step Item End -->
@@ -1042,8 +1347,11 @@
                             <h2>02</h2>
                         </div>
                         <div class="working-step-content">
-                            <h3>اختيار الرحلة</h3>
-                            <p>استعرض خيارات الرحلات والأسعار واختر الأنسب لك بكل شفافية.</p>
+                            <h3 en-lang="Choose Trip" ar-lang=" اختيار الرحلة">اختيار الرحلة</h3>
+                            <p en-lang="Browse trip options and prices, then choose what suits you best"
+                                ar-lang=" استعرض خيارات الرحلات والأسعار واختر الأنسب لك بكل شفافية">
+                                استعرض خيارات الرحلات والأسعار واختر الأنسب لك بكل شفافية.
+                            </p>
                         </div>
                     </div>
                     <!-- Process Step Item End -->
@@ -1056,8 +1364,11 @@
                             <h2>03</h2>
                         </div>
                         <div class="working-step-content">
-                            <h3>انطلاق آمن</h3>
-                            <p>استمتع برحلة آمنة مع سائقين موثوقين وتتبع مباشر للمسار.</p>
+                            <h3 en-lang="Safe Start" ar-lang=" انطلاق آمن">انطلاق آمن</h3>
+                            <p en-lang="Enjoy a safe ride with trusted drivers and real-time tracking"
+                                ar-lang=" استمتع برحلة آمنة مع سائقين موثوقين وتتبع مباشر للمسار">
+                                استمتع برحلة آمنة مع سائقين موثوقين وتتبع مباشر للمسار.
+                            </p>
                         </div>
                     </div>
                     <!-- Process Step Item End -->
@@ -1070,8 +1381,11 @@
                             <h2>04</h2>
                         </div>
                         <div class="working-step-content">
-                            <h3>الدعم والتقييم</h3>
-                            <p>قيّم رحلتك وتواصل مع دعم DOZ المتاح على مدار الساعة.</p>
+                            <h3 en-lang="Support & Rating" ar-lang=" الدعم والتقييم">الدعم والتقييم</h3>
+                            <p en-lang="Rate your trip and contact DOZ support available 24/7"
+                                ar-lang=" قيّم رحلتك وتواصل مع دعم DOZ المتاح على مدار الساعة">
+                                قيّم رحلتك وتواصل مع دعم DOZ المتاح على مدار الساعة.
+                            </p>
                         </div>
                     </div>
                     <!-- Process Step Item End -->
@@ -1081,6 +1395,7 @@
     </div>
     <!-- Our Process Section End -->
 
+
     <!-- Our Testimonials Section Start -->
     <div class="our-testimonials" id="Testimonials">
         <div class="container">
@@ -1088,8 +1403,12 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">آراء العملاء</h3>
-                        <h2 data-cursor="-opaque">اكتشف ما يقوله <span>مسافرونا السعداء</span></h2>
+                        <h3 class="wow fadeInUp" en-lang="Customer Reviews" ar-lang=" آراء العملاء">آراء العملاء</h3>
+                        <h2 data-cursor="-opaque" en-lang="Discover what our happy travelers say "
+                            ar-lang=" اكتشف ما يقوله مسافرونا السعداء">
+                            اكتشف ما يقوله
+                            <span en-lang="our happy travelers" ar-lang=" مسافرونا السعداء">مسافرونا السعداء</span>
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -1110,7 +1429,7 @@
                     <!-- Testimonial Slider Start -->
                     <div class="testimonial-slider">
                         <div class="swiper">
-                            <div class="swiper-wrapper" data-cursor-text="اسحب">
+                            <div class="swiper-wrapper" data-cursor-text="اسحب" en-lang="Swipe" ar-lang=" اسحب">
                                 <!-- Testimonial Slide Start -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
@@ -1127,13 +1446,16 @@
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
-                                            <p>"استخدام DOZ جعل رحلاتي اليومية أسهل بكثير! التطبيق سهل الاستخدام،
-                                                والرحلات سريعة وآمنة، والسائقون محترفون جدًا. أنصح الجميع باستخدامه
-                                                لتجربة تنقّل موثوقة."</p>
+                                            <p en-lang='"Using DOZ made my daily trips much easier! The app is user-friendly, trips are fast and safe, and the drivers are very professional. I recommend it for a reliable mobility experience."'
+                                                ar-lang='"استخدام DOZ جعل رحلاتي اليومية أسهل بكثير! التطبيق سهل الاستخدام، الرحلات سريعة وآمنة، والسائقون محترفون جدًا. أنصح الجميع باستخدامه لتجربة تنقّل موثوقة."'>
+                                                "استخدام DOZ جعل رحلاتي اليومية أسهل بكثير! التطبيق سهل الاستخدام،
+                                                الرحلات سريعة وآمنة، والسائقون محترفون جدًا. أنصح الجميع باستخدامه
+                                                لتجربة تنقّل موثوقة."
+                                            </p>
                                         </div>
                                         <div class="testimonial-body">
-                                            <h3>سارة أحمد</h3>
-                                            <p>مسافرة منتظمة</p>
+                                            <h3 en-lang="Sarah Ahmed" ar-lang=" سارة أحمد">سارة أحمد</h3>
+                                            <p en-lang="Regular Traveler" ar-lang=" مسافرة منتظمة">مسافرة منتظمة</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1155,12 +1477,15 @@
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
-                                            <p>"DOZ وفّرت علي الكثير من الوقت والجهد. الرحلات مريحة، والتطبيق يوفّر
-                                                متابعة دقيقة لكل رحلة. الخدمة ممتازة ودعم العملاء سريع جدًا."</p>
+                                            <p en-lang='"DOZ saved me a lot of time and effort. Trips are comfortable, and the app provides precise tracking for every ride. Excellent service and very fast customer support."'
+                                                ar-lang='"DOZ وفّرت علي الكثير من الوقت والجهد. الرحلات مريحة، والتطبيق يوفّر متابعة دقيقة لكل رحلة. الخدمة ممتازة ودعم العملاء سريع جدًا."'>
+                                                "DOZ وفّرت علي الكثير من الوقت والجهد. الرحلات مريحة، والتطبيق يوفّر
+                                                متابعة دقيقة لكل رحلة. الخدمة ممتازة ودعم العملاء سريع جدًا."
+                                            </p>
                                         </div>
                                         <div class="testimonial-body">
-                                            <h3>محمد سعيد</h3>
-                                            <p>مسافر يومي</p>
+                                            <h3 en-lang="Mohamed Said" ar-lang=" محمد سعيد">محمد سعيد</h3>
+                                            <p en-lang="Daily Traveler" ar-lang=" مسافر يومي">مسافر يومي</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1179,6 +1504,7 @@
     </div>
     <!-- Our Testimonials Section End -->
 
+
     <!-- Our FAQs Section Start -->
     <div class="our-faqs" id="faqs">
         <div class="container">
@@ -1186,8 +1512,12 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">الأسئلة الشائعة</h3>
-                        <h2 data-cursor="-opaque">إجابات على أسئلتك <span>الأكثر شيوعًا</span></h2>
+                        <h3 class="wow fadeInUp" en-lang="Frequently Asked Questions" ar-lang=" الأسئلة الشائعة">الأسئلة
+                            الشائعة</h3>
+                        <h2 data-cursor="-opaque" en-lang="Answers to your "
+                            ar-lang=" إجابات على أسئلتك الأكثر شيوعًا">
+                            إجابات على أسئلتك <span en-lang="most common questions" ar-lang=" الأكثر شيوعًا">الأكثر شيوعًا</span>
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -1200,9 +1530,13 @@
                         <!-- FAQs Item Start -->
                         <div class="faqs-item wow fadeInUp">
                             <div class="faqs-item-content">
-                                <h3>كيف أبدأ باستخدام تطبيق DOZ؟</h3>
-                                <p>كل اللي عليك تحمّل التطبيق من متجر Google Play أو App Store، وسجّل بياناتك، وابدأ
-                                    رحلتك بكل سهولة!</p>
+                                <h3 en-lang="How do I start using the DOZ app?" ar-lang=" كيف أبدأ باستخدام تطبيق DOZ؟">
+                                    كيف أبدأ باستخدام تطبيق DOZ؟</h3>
+                                <p en-lang="Just download the app from Google Play or App Store, register your details, and start your journey easily!"
+                                    ar-lang=" كل اللي عليك تحمّل التطبيق من متجر Google Play أو App Store، وسجّل بياناتك، وابدأ رحلتك بكل سهولة!">
+                                    كل اللي عليك تحمّل التطبيق من متجر Google Play أو App Store، وسجّل بياناتك، وابدأ
+                                    رحلتك بكل سهولة!
+                                </p>
                             </div>
                         </div>
                         <!-- FAQs Item End -->
@@ -1210,9 +1544,14 @@
                         <!-- FAQs Item Start -->
                         <div class="faqs-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="faqs-item-content">
-                                <h3>ما الأجهزة المتوافقة مع DOZ؟</h3>
-                                <p>التطبيق متوافق مع جميع أجهزة Android و iOS الحديثة، وبيدعم التحديثات بشكل مستمر لضمان
-                                    أفضل أداء.</p>
+                                <h3 en-lang="Which devices are compatible with DOZ?"
+                                    ar-lang=" ما الأجهزة المتوافقة مع DOZ؟">ما الأجهزة المتوافقة مع DOZ؟</h3>
+                                <p en-lang="The app is compatible with all modern Android and iOS devices, supporting continuous updates for optimal performance."
+                                    ar-lang=" التطبيق متوافق مع جميع أجهزة Android و iOS الحديثة، وبيدعم التحديثات بشكل مستمر لضمان أفضل أداء.">
+                                    التطبيق متوافق مع جميع أجهزة Android و iOS الحديثة، وبيدعم التحديثات بشكل مستمر
+                                    لضمان
+                                    أفضل أداء.
+                                </p>
                             </div>
                         </div>
                         <!-- FAQs Item End -->
@@ -1220,8 +1559,12 @@
                         <!-- FAQs Item Start -->
                         <div class="faqs-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="faqs-item-content">
-                                <h3>هل يمكن تعديل الرحلات بعد الحجز؟</h3>
-                                <p>نعم، يمكنك تعديل وقت أو مكان الرحلة مباشرة من التطبيق قبل بدء الرحلة.</p>
+                                <h3 en-lang="Can I modify trips after booking?"
+                                    ar-lang=" هل يمكن تعديل الرحلات بعد الحجز؟">هل يمكن تعديل الرحلات بعد الحجز؟</h3>
+                                <p en-lang="Yes, you can modify the time or location directly from the app before the trip starts."
+                                    ar-lang=" نعم، يمكنك تعديل وقت أو مكان الرحلة مباشرة من التطبيق قبل بدء الرحلة.">
+                                    نعم، يمكنك تعديل وقت أو مكان الرحلة مباشرة من التطبيق قبل بدء الرحلة.
+                                </p>
                             </div>
                         </div>
                         <!-- FAQs Item End -->
@@ -1229,9 +1572,13 @@
                         <!-- FAQs Item Start -->
                         <div class="faqs-item wow fadeInUp" data-wow-delay="0.6s">
                             <div class="faqs-item-content">
-                                <h3>ما هي سياسة الاسترجاع؟</h3>
-                                <p>إذا واجهتك أي مشكلة مع الباقة المدفوعة، تواصل مع فريق الدعم خلال 7 أيام من الاشتراك،
-                                    وحنساعدك في أقرب وقت.</p>
+                                <h3 en-lang="What is the refund policy?" ar-lang=" ما هي سياسة الاسترجاع؟">ما هي سياسة
+                                    الاسترجاع؟</h3>
+                                <p en-lang="If you encounter any issue with a paid package, contact the support team within 7 days of subscription, and we'll assist you promptly."
+                                    ar-lang=" إذا واجهتك أي مشكلة مع الباقة المدفوعة، تواصل مع فريق الدعم خلال 7 أيام من الاشتراك، وحنساعدك في أقرب وقت.">
+                                    إذا واجهتك أي مشكلة مع الباقة المدفوعة، تواصل مع فريق الدعم خلال 7 أيام من الاشتراك،
+                                    وحنساعدك في أقرب وقت.
+                                </p>
                             </div>
                         </div>
                         <!-- FAQs Item End -->
@@ -1239,8 +1586,12 @@
                         <!-- FAQs Item Start -->
                         <div class="faqs-item wow fadeInUp" data-wow-delay="0.8s">
                             <div class="faqs-item-content">
-                                <h3>كم تستغرق الرحلة عادةً؟</h3>
-                                <p>يعتمد وقت الرحلة على المسافة وحركة المرور، لكن التطبيق يقدّم تقدير دقيق لكل رحلة.</p>
+                                <h3 en-lang="How long does a trip usually take?" ar-lang=" كم تستغرق الرحلة عادةً؟">كم
+                                    تستغرق الرحلة عادةً؟</h3>
+                                <p en-lang="Trip duration depends on distance and traffic, but the app provides accurate estimates for each ride."
+                                    ar-lang=" يعتمد وقت الرحلة على المسافة وحركة المرور، لكن التطبيق يقدّم تقدير دقيق لكل رحلة.">
+                                    يعتمد وقت الرحلة على المسافة وحركة المرور، لكن التطبيق يقدّم تقدير دقيق لكل رحلة.
+                                </p>
                             </div>
                         </div>
                         <!-- FAQs Item End -->
@@ -1248,9 +1599,15 @@
                         <!-- FAQs Item Start -->
                         <div class="faqs-item wow fadeInUp" data-wow-delay="1s">
                             <div class="faqs-item-content">
-                                <h3>هل أحتاج لدفع نقدًا أم عبر التطبيق؟</h3>
-                                <p>يمكنك الدفع بسهولة عبر التطبيق باستخدام البطاقات الإلكترونية، مع خيار الدفع نقدًا إذا
-                                    رغبت.</p>
+                                <h3 en-lang="Do I need to pay in cash or via the app?"
+                                    ar-lang=" هل أحتاج لدفع نقدًا أم عبر التطبيق؟">هل أحتاج لدفع نقدًا أم عبر التطبيق؟
+                                </h3>
+                                <p en-lang="You can pay easily through the app using e-cards, with the option to pay cash if you prefer."
+                                    ar-lang=" يمكنك الدفع بسهولة عبر التطبيق باستخدام البطاقات الإلكترونية، مع خيار الدفع نقدًا إذا رغبت.">
+                                    يمكنك الدفع بسهولة عبر التطبيق باستخدام البطاقات الإلكترونية، مع خيار الدفع نقدًا
+                                    إذا
+                                    رغبت.
+                                </p>
                             </div>
                         </div>
                         <!-- FAQs Item End -->
@@ -1262,6 +1619,7 @@
     </div>
     <!-- Our FAQs Section End -->
 
+
     <!-- Our Blog Section Start -->
     <div class="our-blog">
         <div class="container">
@@ -1269,8 +1627,12 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">أحدث المقالات</h3>
-                        <h2 data-cursor="-opaque">رؤى، نصائح <span>وإلهام</span> في التنقّل</h2>
+                        <h3 class="wow fadeInUp" en-lang="Latest Articles" ar-lang=" أحدث المقالات">أحدث المقالات</h3>
+                        <h2 data-cursor="-opaque" en-lang="Insights, Tips & Inspiration in Mobility "
+                            ar-lang=" رؤى، نصائح وإلهام في التنقّل">
+                            رؤى، نصائح <span en-lang="and Inspiration On the move"
+                                ar-lang=" وإلهام في التنقّل">وإلهام</span>
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -1282,7 +1644,7 @@
                     <div class="post-item wow fadeInUp">
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="عرض">
+                            <a href="blog-single.html" data-cursor-text="View" en-lang="View" ar-lang=" عرض">
                                 <figure class="image-anime">
                                     <img src="images/post-1.png" alt="">
                                 </figure>
@@ -1294,13 +1656,19 @@
                         <div class="blog-item-body">
                             <!-- Post Item Content Start -->
                             <div class="post-item-content">
-                                <h2><a href="blog-single.html">أفضل طرق التنقّل في المدن المزدحمة</a></h2>
+                                <h2>
+                                    <a href="blog-single.html" en-lang="Best Ways to Commute in Crowded Cities"
+                                        ar-lang=" أفضل طرق التنقّل في المدن المزدحمة">
+                                        أفضل طرق التنقّل في المدن المزدحمة
+                                    </a>
+                                </h2>
                             </div>
                             <!-- Post Item Content End -->
 
                             <!-- Blog Item Button Start -->
                             <div class="blog-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">اقرأ المزيد</a>
+                                <a href="blog-single.html" class="readmore-btn" en-lang="Read More"
+                                    ar-lang=" اقرأ المزيد">اقرأ المزيد</a>
                             </div>
                             <!-- Blog Item Button End -->
                         </div>
@@ -1314,7 +1682,7 @@
                     <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="عرض">
+                            <a href="blog-single.html" data-cursor-text="View" en-lang="View" ar-lang=" عرض">
                                 <figure class="image-anime">
                                     <img src="images/post-2.jpg" alt="">
                                 </figure>
@@ -1326,13 +1694,19 @@
                         <div class="blog-item-body">
                             <!-- Post Item Content Start -->
                             <div class="post-item-content">
-                                <h2><a href="blog-single.html">نصائح لاختيار أفضل وسيلة تنقّل</a></h2>
+                                <h2>
+                                    <a href="blog-single.html" en-lang="Tips for Choosing the Best Mode of Transport"
+                                        ar-lang=" نصائح لاختيار أفضل وسيلة تنقّل">
+                                        نصائح لاختيار أفضل وسيلة تنقّل
+                                    </a>
+                                </h2>
                             </div>
                             <!-- Post Item Content End -->
 
                             <!-- Blog Item Button Start -->
                             <div class="blog-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">اقرأ المزيد</a>
+                                <a href="blog-single.html" class="readmore-btn" en-lang="Read More"
+                                    ar-lang=" اقرأ المزيد">اقرأ المزيد</a>
                             </div>
                             <!-- Blog Item Button End -->
                         </div>
@@ -1346,7 +1720,7 @@
                     <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
                         <!-- Post Featured Image Start-->
                         <div class="post-featured-image">
-                            <a href="blog-single.html" data-cursor-text="عرض">
+                            <a href="blog-single.html" data-cursor-text="View" en-lang="View" ar-lang=" عرض">
                                 <figure class="image-anime">
                                     <img src="images/post-3.png" alt="">
                                 </figure>
@@ -1358,13 +1732,19 @@
                         <div class="blog-item-body">
                             <!-- Post Item Content Start -->
                             <div class="post-item-content">
-                                <h2><a href="blog-single.html">كيف تجعل رحلاتك أكثر أمانًا وسهولة</a></h2>
+                                <h2>
+                                    <a href="blog-single.html" en-lang="How to Make Your Trips Safer and Easier"
+                                        ar-lang=" كيف تجعل رحلاتك أكثر أمانًا وسهولة">
+                                        كيف تجعل رحلاتك أكثر أمانًا وسهولة
+                                    </a>
+                                </h2>
                             </div>
                             <!-- Post Item Content End -->
 
                             <!-- Blog Item Button Start -->
                             <div class="blog-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">اقرأ المزيد</a>
+                                <a href="blog-single.html" class="readmore-btn" en-lang="Read More"
+                                    ar-lang=" اقرأ المزيد">اقرأ المزيد</a>
                             </div>
                             <!-- Blog Item Button End -->
                         </div>
@@ -1376,6 +1756,7 @@
         </div>
     </div>
     <!-- Our Blog Section End -->
+
 
     <!-- Footer Start -->
     <footer class="main-footer">
@@ -1396,8 +1777,11 @@
 
                                 <!-- About Footer Content Start -->
                                 <div class="about-footer-content">
-                                    <p>مع DOZ، نجعل التنقّل أكثر سهولة وأمانًا. ابتكار وحلول ذكية لخدمة العملاء بلا
-                                        حدود.</p>
+                                    <p en-lang="With DOZ, we make mobility easier and safer. Smart solutions for limitless service."
+                                        ar-lang=" مع DOZ، نجعل التنقّل أكثر سهولة وأمانًا. ابتكار وحلول ذكية لخدمة العملاء بلا حدود.">
+                                        مع DOZ، نجعل التنقّل أكثر سهولة وأمانًا. ابتكار وحلول ذكية لخدمة العملاء بلا
+                                        حدود.
+                                    </p>
                                 </div>
                                 <a href=""><img src="images/appstore.png" alt=""
                                         style="width: 150px; margin-top: 30px;"></a>
@@ -1407,11 +1791,13 @@
 
                                 <!-- Footer Newsletter Form Start -->
                                 <div class="footer-newsletter-form">
-                                    <h3>اشترك في نشرتنا الإخبارية:</h3>
+                                    <h3 en-lang="Subscribe to our newsletter:" ar-lang=" اشترك في نشرتنا الإخبارية:">
+                                        اشترك في نشرتنا الإخبارية:</h3>
                                     <form id="newsletterForm" action="#" method="POST">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control" id="mail"
-                                                placeholder="أدخل بريدك الإلكتروني" required>
+                                                placeholder="أدخل بريدك الإلكتروني" en-lang="Enter your email"
+                                                ar-lang=" أدخل بريدك الإلكتروني" required>
                                             <button type="submit" class="newsletter-btn"><i
                                                     class="fa-regular fa-paper-plane"></i></button>
                                         </div>
@@ -1438,36 +1824,49 @@
                                 <div class="footer-links-list">
                                     <!-- Footer Links Start -->
                                     <div class="footer-links">
-                                        <h3>DOZ</h3>
+                                        <h3 en-lang="DOZ" ar-lang=" DOZ">DOZ</h3>
                                         <ul>
-                                            <li><a href="#benefits">لماذا DOZ؟</a></li>
-                                            <li><a href="#how-it-works">كيف تعمل الخدمة ؟</a></li>
-                                            <li><a href="changelog.html">آخر التحديثات</a></li>
-                                            <li><a href="#download">تحميل التطبيق</a></li>
+                                            <li><a href="#benefits" en-lang="Why DOZ?" ar-lang=" لماذا DOZ؟">لماذا
+                                                    DOZ؟</a></li>
+                                            <li><a href="#how-it-works" en-lang="How It Works"
+                                                    ar-lang=" كيف تعمل الخدمة ؟">كيف تعمل الخدمة ؟</a></li>
+                                            <li><a href="changelog.html" en-lang="Latest Updates"
+                                                    ar-lang=" آخر التحديثات">آخر التحديثات</a></li>
+                                            <li><a href="#download" en-lang="Download App" ar-lang=" تحميل التطبيق">تحميل
+                                                    التطبيق</a></li>
                                         </ul>
                                     </div>
                                     <!-- Footer Links End -->
 
                                     <!-- Footer Links Start -->
                                     <div class="footer-links footer-service-links">
-                                        <h3>استكشف</h3>
+                                        <h3 en-lang="Explore" ar-lang=" استكشف">استكشف</h3>
                                         <ul>
-                                            <li><a href="#Testimonials">آراء المستخدمين</a></li>
-                                            <li><a href="#faqs">الأسئلة الشائعة</a></li>
-                                            <li><a href="contact.html">الدعم الفني</a></li>
-                                            <li><a href="career-role.html"> سلامة السكوتر</a></li>
+                                            <li><a href="#Testimonials" en-lang="User Reviews"
+                                                    ar-lang=" آراء المستخدمين">آراء المستخدمين</a></li>
+                                            <li><a href="#faqs" en-lang="FAQs" ar-lang=" الأسئلة الشائعة">الأسئلة
+                                                    الشائعة</a></li>
+                                            <li><a href="contact.html" en-lang="Support" ar-lang=" الدعم الفني">الدعم
+                                                    الفني</a></li>
+                                            <li><a href="career-role.html" en-lang="Scooter Safety"
+                                                    ar-lang=" سلامة السكوتر">سلامة السكوتر</a></li>
                                         </ul>
                                     </div>
                                     <!-- Footer Links End -->
 
                                     <!-- Footer Links Start -->
                                     <div class="footer-links footer-social-links">
-                                        <h3>وسائل التواصل الاجتماعي</h3>
+                                        <h3 en-lang="Social Media" ar-lang=" وسائل التواصل الاجتماعي">وسائل التواصل
+                                            الاجتماعي</h3>
                                         <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i>فيسبوك</a></li>
-                                            <li><a href="#"><i class="fa-brands fa-twitter"></i>تويتر</a></li>
-                                            <li><a href="#"><i class="fa-brands fa-instagram"></i>إنستجرام</a></li>
-                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i>لينكدإن</a></li>
+                                            <li><a href="#" en-lang="Facebook" ar-lang=" فيسبوك"><i
+                                                        class="fa-brands fa-facebook-f"></i>فيسبوك</a></li>
+                                            <li><a href="#" en-lang="Twitter" ar-lang=" تويتر"><i
+                                                        class="fa-brands fa-twitter"></i>تويتر</a></li>
+                                            <li><a href="#" en-lang="Instagram" ar-lang=" إنستجرام"><i
+                                                        class="fa-brands fa-instagram"></i>إنستجرام</a></li>
+                                            <li><a href="#" en-lang="LinkedIn" ar-lang=" لينكدإن"><i
+                                                        class="fa-brands fa-linkedin-in"></i>لينكدإن</a></li>
                                         </ul>
                                     </div>
                                     <!-- Footer Links End -->
@@ -1482,7 +1881,10 @@
                     <div class="col-lg-12">
                         <!-- Footer Copyright Text Start -->
                         <div class="footer-copyright-text">
-                            <p>حقوق النشر © 2026 DOZ. جميع الحقوق محفوظة.</p>
+                            <p en-lang="© 2026 DOZ. All rights reserved."
+                                ar-lang=" حقوق النشر © 2026 DOZ. جميع الحقوق محفوظة.">
+                                حقوق النشر © 2026 DOZ. جميع الحقوق محفوظة.
+                            </p>
                         </div>
                         <!-- Footer Copyright Text End -->
                     </div>
@@ -1494,6 +1896,7 @@
     <!-- Footer End -->
 
 
+    <script src="js/lang.js"></script>
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->

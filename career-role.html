@@ -86,7 +86,7 @@
         }
 
         .safety-DOZz-content-block {
-            background-color: #2a2a2a;
+            background-color: #2a2a2acf;
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 30px;
@@ -272,7 +272,7 @@
 
 <body>
     <!-- Preloader Start -->
-    <div class="preloader">
+    <div class="preloader" id="preloader">
         <div class="loading-container">
             <div class="loading"></div>
             <div id="loading-icon"><img src="images/loader.png" alt=""></div>
@@ -286,7 +286,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="./">
                         <img src="images/logo.svg" alt="Logo">
                     </a>
                     <!-- Logo End -->
@@ -295,170 +295,226 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="./">عن DOZ</a>
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="./" en-lang="About DOZ" ar-lang="عن DOZ">عن DOZ</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html#benefits"> لماذا DOZ
-                                                ؟</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html#benefits" en-lang="Why DOZ?"
+                                                ar-lang="لماذا DOZ ؟">
+                                                لماذا DOZ ؟
+                                            </a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="index.html#how-it-works">كيف تعمل
-                                                الخدمة ؟
-                                            </a></li>
-                                        <li class="nav-item"><a class="nav-link" href="changelog.html">آخر التحديثات
-                                            </a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html#how-it-works"
+                                                en-lang="How does the service work?" ar-lang="كيف تعمل الخدمة ؟">
+                                                كيف تعمل الخدمة ؟
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="changelog.html" en-lang="Latest Updates"
+                                                ar-lang="آخر التحديثات">
+                                                آخر التحديثات
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="career-role.html">سلامة السكوتر</a></li>
-                                <li class="nav-item"><a class="nav-link" href="index.html#features">مميزات التطبيق</a>
-                                </li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">المصادر</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html#Testimonials">آراء
-                                                العملاء
-                                            </a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog.html">مدونة DOZ</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="index.html#faqs">الأسئلة الشائعة</a></li>
-                                <li class="nav-item"><a class="nav-link" href="franchise.html">امتياز</a></li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link" href="career-role.html" en-lang="Scooter Safety"
+                                        ar-lang="سلامة السكوتر">
+                                        سلامة السكوتر
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.htmls" en-lang="App Features"
+                                        ar-lang="مميزات التطبيق">
+                                        مميزات التطبيق
+                                    </a>
+                                </li>
+
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="#" en-lang="Resources" ar-lang="المصادر">
+                                        المصادر
+                                    </a>
+                                    <ul>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html#Testimonials" en-lang="Customer Reviews"
+                                                ar-lang="آراء العملاء">
+                                                آراء العملاء
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blog.html" en-lang="DOZ Blog" ar-lang="مدونة DOZ">
+                                                مدونة DOZ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#faqs" en-lang="FAQs" ar-lang="الأسئلة الشائعة">
+                                        الأسئلة الشائعة
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="franchise.html" en-lang="Franchise" ar-lang="امتياز">
+                                        امتياز
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
                         <!-- Header Social Box Start -->
                         <div class="header-social-box d-inline-flex">
-                            <!-- Header Social Links Start -->
-                            <div class="header-social-links">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Header Social Links End -->
+                            <div class="language-toggle">
+                                <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">
+                                    <i class="fas fa-globe"></i>
+                                    <span id="langText">EN</span>
+                                </button>
 
-                            <!-- Header Btn Start -->
-                            <div class="header-btn">
-                                <!-- Toggle Button trigger modal Start -->
-                                <button class="btn btn-popup" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
-                                        src="images/header-btn-dot.svg" alt=""></button>
-                                <!-- Toggle Button trigger modal End -->
-
-                                <!-- Header Sidebar Start -->
-                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-
-                                    <div class="offcanvas-body">
-                                        <!-- Header Contact Box Start -->
-                                        <div class="header-contact-box">
-                                            <div class="icon-box">
-                                                <img src="images/icon-phone-accent.svg" alt="">
-                                            </div>
-                                            <div class="header-contact-box-content">
-                                                <h3>الهاتف</h3>
-                                                <p>+968 9765 3339</p>
-                                            </div>
-                                        </div>
-                                        <!-- Header Contact Box End -->
-
-                                        <!-- Header Contact Box Start -->
-                                        <div class="header-contact-box">
-                                            <div class="icon-box">
-                                                <img src="images/icon-mail-accent.svg" alt="">
-                                            </div>
-                                            <div class="header-contact-box-content">
-                                                <h3>البريد الإلكتروني</h3>
-                                                <p>info@DOZ.com</p>
-                                            </div>
-                                        </div>
-                                        <!-- Header Contact Box End -->
-
-                                        <!-- Header Contact Box Start -->
-                                        <div class="header-contact-box">
-                                            <div class="icon-box">
-                                                <img src="images/icon-location-accent.svg" alt="">
-                                            </div>
-                                            <div class="header-contact-box-content">
-                                                <h3>العنوان</h3>
-                                                <p></p>
-                                            </div>
-                                        </div>
-                                        <!-- Header Contact Box End -->
-
-                                        <!-- Header Social Links Start -->
-                                        <div class="header-social-links sidebar-social-links">
-                                            <h3>ابقَ على تواصل</h3>
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- Header Social Links End -->
-                                    </div>
+                                <!-- Header Social Links Start -->
+                                <div class="header-social-links">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
                                 </div>
-                                <!-- Header Sidebar End -->
+                                <!-- Header Social Links End -->
+
+                                <!-- Header Btn Start -->
+                                <div class="header-btn">
+                                    <button class="btn btn-popup" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                        <img src="images/header-btn-dot.svg" alt="">
+                                    </button>
+
+                                    <!-- Header Sidebar Start -->
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+
+                                        <div class="offcanvas-body">
+                                            <!-- Header Contact Box Start -->
+                                            <div class="header-contact-box">
+                                                <div class="icon-box">
+                                                    <img src="images/icon-phone-accent.svg" alt="">
+                                                </div>
+                                                <div class="header-contact-box-content">
+                                                    <h3 en-lang="Phone" ar-lang="الهاتف">الهاتف</h3>
+                                                    <p>+968 9765 3339</p>
+                                                </div>
+                                            </div>
+                                            <!-- Header Contact Box End -->
+
+                                            <!-- Header Contact Box Start -->
+                                            <div class="header-contact-box">
+                                                <div class="icon-box">
+                                                    <img src="images/icon-mail-accent.svg" alt="">
+                                                </div>
+                                                <div class="header-contact-box-content">
+                                                    <h3 en-lang="Email" ar-lang="البريد الإلكتروني">البريد الإلكتروني
+                                                    </h3>
+                                                    <p>info@DOZ.com</p>
+                                                </div>
+                                            </div>
+                                            <!-- Header Contact Box End -->
+
+                                            <!-- Header Contact Box Start -->
+                                            <div class="header-contact-box">
+                                                <div class="icon-box">
+                                                    <img src="images/icon-location-accent.svg" alt="">
+                                                </div>
+                                                <div class="header-contact-box-content">
+                                                    <h3 en-lang="Address" ar-lang="العنوان">العنوان</h3>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <!-- Header Contact Box End -->
+
+                                            <!-- Header Social Links Start -->
+                                            <div class="header-social-links sidebar-social-links">
+                                                <h3 en-lang="Stay Connected" ar-lang="ابقَ على تواصل">ابقَ على تواصل
+                                                </h3>
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Header Social Links End -->
+                                        </div>
+                                    </div>
+                                    <!-- Header Sidebar End -->
+                                </div>
+                                <!-- Header Btn End -->
                             </div>
-                            <!-- Header Btn End -->
+                            <!-- Header Social Box End -->
                         </div>
-                        <!-- Header Social Box End -->
+                        <!-- Main Menu End -->
+                        <div class="navbar-toggle"></div>
                     </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
-                </div>
             </nav>
             <div class="responsive-menu"></div>
         </div>
     </header>
     <!-- Header End -->
 
-    <!-- Page Header Start -->
-    <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="" data-cursor="-opaque">السلامة في <span>DOZ</span></h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">الرئسية</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">السلامة في DOZ</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
+<!-- Page Header Start -->
+<div class="page-header parallaxie">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Page Header Box Start -->
+                <div class="page-header-box">
+                    <h1 class="" data-cursor="-opaque" ar-lang="السلامة في DOZ" en-lang="Safety in ">
+                        السلامة في <span>DOZ</span>
+                    </h1>
+                    <nav class="wow fadeInUp">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="./" ar-lang="الرئسية" en-lang="Home">الرئسية</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page" ar-lang="السلامة في DOZ" en-lang="Safety in DOZ">
+                                السلامة في DOZ
+                            </li>
+                        </ol>
+                    </nav>
                 </div>
+                <!-- Page Header Box End -->
             </div>
         </div>
     </div>
-    <!-- Page Header End -->
+</div>
+<!-- Page Header End -->
 
-    <!-- Scrolling Ticker Section Start -->
+
+    <!-- Scrolling Ticker Section Start --> 
     <div class="our-scrolling-ticker">
         <!-- Scrolling Ticker Start -->
         <div class="scrolling-ticker-box" dir="ltr">
             <div class="scrolling-content">
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
+                <span ar-lang="تطبيقات التنقّل الذكية" en-lang="Smart Mobility Apps"><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
+                <span ar-lang="خدمات الحجز والمواعيد" en-lang="Booking & Appointment Services"><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
+                <span ar-lang="خدمة العملاء والدعم" en-lang="Customer Service & Support"><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
+                <span ar-lang="تحليلات ورؤى ذكية" en-lang="Smart Analytics & Insights"><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
+                <span ar-lang="تطبيقات التنقّل الذكية" en-lang="Smart Mobility Apps"><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
+                <span ar-lang="خدمات الحجز والمواعيد" en-lang="Booking & Appointment Services"><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
+                <span ar-lang="خدمة العملاء والدعم" en-lang="Customer Service & Support"><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
+                <span ar-lang="تحليلات ورؤى ذكية" en-lang="Smart Analytics & Insights"><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
             </div>
 
             <div class="scrolling-content">
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
-                <span><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
-                <span><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
+                <span ar-lang="تطبيقات التنقّل الذكية" en-lang="Smart Mobility Apps"><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
+                <span ar-lang="خدمات الحجز والمواعيد" en-lang="Booking & Appointment Services"><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
+                <span ar-lang="خدمة العملاء والدعم" en-lang="Customer Service & Support"><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
+                <span ar-lang="تحليلات ورؤى ذكية" en-lang="Smart Analytics & Insights"><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
+                <span ar-lang="تطبيقات التنقّل الذكية" en-lang="Smart Mobility Apps"><img src="images/asterisk-icon.svg" alt="">تطبيقات التنقّل الذكية</span>
+                <span ar-lang="خدمات الحجز والمواعيد" en-lang="Booking & Appointment Services"><img src="images/asterisk-icon.svg" alt="">خدمات الحجز والمواعيد</span>
+                <span ar-lang="خدمة العملاء والدعم" en-lang="Customer Service & Support"><img src="images/asterisk-icon.svg" alt="">خدمة العملاء والدعم</span>
+                <span ar-lang="تحليلات ورؤى ذكية" en-lang="Smart Analytics & Insights"><img src="images/asterisk-icon.svg" alt="">تحليلات ورؤى ذكية</span>
             </div>
         </div>
         <!-- Scrolling Ticker End -->
@@ -467,112 +523,93 @@
 
     <div class="safety-DOZz-wrapper">
         <header class="safety-DOZz-hero">
-            <h1 class="safety-DOZz-main-title">ركوب آمن مع DOZz</h1>
-            <p class="safety-DOZz-intro-text">
-                سلامتك هي أولويتنا! في DOZz، نعمل باستمرار على تحسين تجربة الركوب وضمان بيئة آمنة لكل المستخدمين في
-                سلطنة عمان. إليك بعض من مبادراتنا ونصائحنا لتحقيق أقصى درجات الأمان أثناء ركوب السكوتر الكهربائي.
+            <h1 class="safety-DOZz-main-title" ar-lang="ركوب آمن مع DOZz" en-lang="Safe Riding with DOZz">ركوب آمن مع DOZz</h1>
+            <p class="safety-DOZz-intro-text" ar-lang="سلامتك هي أولويتنا! في DOZz، نعمل باستمرار على تحسين تجربة الركوب وضمان بيئة آمنة لكل المستخدمين في سلطنة عمان. إليك بعض من مبادراتنا ونصائحنا لتحقيق أقصى درجات الأمان أثناء ركوب السكوتر الكهربائي." en-lang="Your safety is our priority! At DOZz, we continuously work to improve the riding experience and ensure a safe environment for all users in Oman. Here are some of our initiatives and tips to achieve maximum safety while riding the electric scooter.">
+                سلامتك هي أولويتنا! في DOZz، نعمل باستمرار على تحسين تجربة الركوب وضمان بيئة آمنة لكل المستخدمين في سلطنة عمان. إليك بعض من مبادراتنا ونصائحنا لتحقيق أقصى درجات الأمان أثناء ركوب السكوتر الكهربائي.
             </p>
         </header>
 
         <main>
             <!-- Security Features Section -->
             <section class="safety-DOZz-content-block">
-                <h2 class="safety-DOZz-section-heading">
+                <h2 class="safety-DOZz-section-heading" ar-lang="ميزات الأمان في DOZz" en-lang="Safety Features in DOZz">
                     <span class="safety-DOZz-emoji-icon">🛡️</span>
                     ميزات الأمان في DOZz
                 </h2>
                 <ul class="safety-DOZz-features-grid">
                     <li class="safety-DOZz-feature-box">
-                        <div class="safety-DOZz-feature-title">الوضع المبتدئ</div>
-                        <div class="safety-DOZz-feature-description">نحد سرعة السكوتر إلى 15 كم/س في أول 5 رحلات لك.
-                        </div>
+                        <div class="safety-DOZz-feature-title" ar-lang="الوضع المبتدئ" en-lang="Beginner Mode">الوضع المبتدئ</div>
+                        <div class="safety-DOZz-feature-description" ar-lang="نحد سرعة السكوتر إلى 15 كم/س في أول 5 رحلات لك." en-lang="We limit the scooter speed to 15 km/h during your first 5 rides.">نحد سرعة السكوتر إلى 15 كم/س في أول 5 رحلات لك.</div>
                     </li>
                     <li class="safety-DOZz-feature-box">
-                        <div class="safety-DOZz-feature-title">تدريب قبل الركوب</div>
-                        <div class="safety-DOZz-feature-description">إشعارات تفاعلية قبل كل رحلة لتذكيرك بالقواعد
-                            الأساسية.</div>
+                        <div class="safety-DOZz-feature-title" ar-lang="تدريب قبل الركوب" en-lang="Pre-Ride Training">تدريب قبل الركوب</div>
+                        <div class="safety-DOZz-feature-description" ar-lang="إشعارات تفاعلية قبل كل رحلة لتذكيرك بالقواعد الأساسية." en-lang="Interactive notifications before each ride to remind you of the basic rules.">إشعارات تفاعلية قبل كل رحلة لتذكيرك بالقواعد الأساسية.</div>
                     </li>
                     <li class="safety-DOZz-feature-box">
-                        <div class="safety-DOZz-feature-title">خوذات مجانية</div>
-                        <div class="safety-DOZz-feature-description">نوفر خوذات في أماكن محددة بالتعاون مع شركائنا
-                            المحليين.</div>
+                        <div class="safety-DOZz-feature-title" ar-lang="خوذات مجانية" en-lang="Free Helmets">خوذات مجانية</div>
+                        <div class="safety-DOZz-feature-description" ar-lang="نوفر خوذات في أماكن محددة بالتعاون مع شركائنا المحليين." en-lang="We provide helmets at designated locations in partnership with our local partners.">نوفر خوذات في أماكن محددة بالتعاون مع شركائنا المحليين.</div>
                     </li>
                     <li class="safety-DOZz-feature-box">
-                        <div class="safety-DOZz-feature-title">مساعدة فورية</div>
-                        <div class="safety-DOZz-feature-description">دعم فني مباشر من التطبيق لأي طارئ أو بلاغ.</div>
+                        <div class="safety-DOZz-feature-title" ar-lang="مساعدة فورية" en-lang="Immediate Assistance">مساعدة فورية</div>
+                        <div class="safety-DOZz-feature-description" ar-lang="دعم فني مباشر من التطبيق لأي طارئ أو بلاغ." en-lang="Direct in-app support for any emergency or report.">دعم فني مباشر من التطبيق لأي طارئ أو بلاغ.</div>
                     </li>
                 </ul>
             </section>
 
             <!-- Safety Tips Section -->
             <section class="safety-DOZz-content-block">
-                <h2 class="safety-DOZz-section-heading">
+                <h2 class="safety-DOZz-section-heading" ar-lang="نصائح للركوب الآمن" en-lang="Safe Riding Tips">
                     <span class="safety-DOZz-emoji-icon">💡</span>
                     نصائح للركوب الآمن
                 </h2>
                 <ul class="safety-DOZz-tips-list">
-                    <li class="safety-DOZz-tip-item">
-                        <span class="safety-DOZz-tip-highlight">ارتدِ خوذتك:</span> من الأفضل أن تحضر خوذتك الخاصة
-                        وترتديها دائمًا.
+                    <li class="safety-DOZz-tip-item" ar-lang="ارتدِ خوذتك: من الأفضل أن تحضر خوذتك الخاصة وترتديها دائمًا." en-lang="Wear Your Helmet: It's best to bring your own helmet and always wear it.">
+                        <span class="safety-DOZz-tip-highlight" ar-lang="ارتدِ خوذتك:" en-lang="Wear Your Helmet:">ارتدِ خوذتك:</span> من الأفضل أن تحضر خوذتك الخاصة وترتديها دائمًا.
                     </li>
-                    <li class="safety-DOZz-tip-item">
-                        <span class="safety-DOZz-tip-highlight">ابدأ ببطء:</span> خذ وقتك وتأكد من خلو الطريق.
+                    <li class="safety-DOZz-tip-item" ar-lang="ابدأ ببطء: خذ وقتك وتأكد من خلو الطريق." en-lang="Start Slowly: Take your time and make sure the road is clear.">
+                        <span class="safety-DOZz-tip-highlight" ar-lang="ابدأ ببطء:" en-lang="Start Slowly:">ابدأ ببطء:</span> خذ وقتك وتأكد من خلو الطريق.
                     </li>
-                    <li class="safety-DOZz-tip-item">
-                        <span class="safety-DOZz-tip-highlight">لا تقُد وأنت تحت التأثير:</span> تجنب القيادة في حالات
-                        السكر أو الإرهاق.
+                    <li class="safety-DOZz-tip-item" ar-lang="لا تقُد وأنت تحت التأثير: تجنب القيادة في حالات السكر أو الإرهاق." en-lang="Do Not Ride Under Influence: Avoid riding when intoxicated or fatigued.">
+                        <span class="safety-DOZz-tip-highlight" ar-lang="لا تقُد وأنت تحت التأثير:" en-lang="Do Not Ride Under Influence:">لا تقُد وأنت تحت التأثير:</span> تجنب القيادة في حالات السكر أو الإرهاق.
                     </li>
-                    <li class="safety-DOZz-tip-item">
-                        <span class="safety-DOZz-tip-highlight">احترم قوانين المرور:</span> التزم بالإشارات واحترم
-                        مستخدمي الطريق.
+                    <li class="safety-DOZz-tip-item" ar-lang="احترم قوانين المرور: التزم بالإشارات واحترم مستخدمي الطريق." en-lang="Respect Traffic Rules: Follow signals and respect other road users.">
+                        <span class="safety-DOZz-tip-highlight" ar-lang="احترم قوانين المرور:" en-lang="Respect Traffic Rules:">احترم قوانين المرور:</span> التزم بالإشارات واحترم مستخدمي الطريق.
                     </li>
-                    <li class="safety-DOZz-tip-item">
-                        <span class="safety-DOZz-tip-highlight">لا تركب على الأرصفة:</span> استخدم ممرات الدراجات حيثما
-                        توفرت.
+                    <li class="safety-DOZz-tip-item" ar-lang="لا تركب على الأرصفة: استخدم ممرات الدراجات حيثما توفرت." en-lang="Do Not Ride on Sidewalks: Use bike lanes where available.">
+                        <span class="safety-DOZz-tip-highlight" ar-lang="لا تركب على الأرصفة:" en-lang="Do Not Ride on Sidewalks:">لا تركب على الأرصفة:</span> استخدم ممرات الدراجات حيثما توفرت.
                     </li>
-                    <li class="safety-DOZz-tip-item">
-                        <span class="safety-DOZz-tip-highlight">ركوب فردي فقط:</span> لا تركب مع شخص آخر على نفس
-                        السكوتر.
+                    <li class="safety-DOZz-tip-item" ar-lang="ركوب فردي فقط: لا تركب مع شخص آخر على نفس السكوتر." en-lang="Single Rider Only: Do not ride with another person on the same scooter.">
+                        <span class="safety-DOZz-tip-highlight" ar-lang="ركوب فردي فقط:" en-lang="Single Rider Only:">ركوب فردي فقط:</span> لا تركب مع شخص آخر على نفس السكوتر.
                     </li>
                 </ul>
             </section>
 
             <!-- Parking Section -->
             <section class="safety-DOZz-content-block">
-                <h2 class="safety-DOZz-section-heading">
+                <h2 class="safety-DOZz-section-heading" ar-lang="ركن السكوتر بطريقة مسؤولة" en-lang="Park Your Scooter Responsibly">
                     <span class="safety-DOZz-emoji-icon">🅿️</span>
                     ركن السكوتر بطريقة مسؤولة
                 </h2>
                 <ul class="safety-DOZz-parking-rules">
-                    <li class="safety-DOZz-parking-item">
-                        اركن بالقرب من رفوف الدراجات أو المناطق المخصصة لذلك.
-                    </li>
-                    <li class="safety-DOZz-parking-item">
-                        تجنب إغلاق الأرصفة أو مداخل المباني.
-                    </li>
-                    <li class="safety-DOZz-parking-item">
-                        اركن بجانب سكوترات أخرى وابقِ الطريق مفتوحًا للمشاة.
-                    </li>
+                    <li class="safety-DOZz-parking-item" ar-lang="اركن بالقرب من رفوف الدراجات أو المناطق المخصصة لذلك." en-lang="Park near bike racks or designated areas.">اركن بالقرب من رفوف الدراجات أو المناطق المخصصة لذلك.</li>
+                    <li class="safety-DOZz-parking-item" ar-lang="تجنب إغلاق الأرصفة أو مداخل المباني." en-lang="Avoid blocking sidewalks or building entrances.">تجنب إغلاق الأرصفة أو مداخل المباني.</li>
+                    <li class="safety-DOZz-parking-item" ar-lang="اركن بجانب سكوترات أخرى وابقِ الطريق مفتوحًا للمشاة." en-lang="Park next to other scooters and keep the path clear for pedestrians.">اركن بجانب سكوترات أخرى وابقِ الطريق مفتوحًا للمشاة.</li>
                 </ul>
             </section>
 
             <!-- Report Issue Section -->
             <section class="safety-DOZz-alert-box">
-                <h2 class="safety-DOZz-alert-title">
+                <h2 class="safety-DOZz-alert-title" ar-lang="هل لاحظت مشكلة؟" en-lang="Notice a Problem?">
                     <span class="safety-DOZz-emoji-icon">📢</span>
                     هل لاحظت مشكلة؟
                 </h2>
-                <p class="safety-DOZz-alert-message">
-                    إذا لاحظت سكوتر مركون بشكل خاطئ أو راكب لا يلتزم بقواعد السلامة، نرجو منك إبلاغنا عبر التطبيق
-                    وسنتعامل مع الأمر فورًا.
+                <p class="safety-DOZz-alert-message" ar-lang="إذا لاحظت سكوتر مركون بشكل خاطئ أو راكب لا يلتزم بقواعد السلامة، نرجو منك إبلاغنا عبر التطبيق وسنتعامل مع الأمر فورًا." en-lang="If you notice a scooter parked incorrectly or a rider not following safety rules, please report it through the app and we will handle it immediately.">
+                    إذا لاحظت سكوتر مركون بشكل خاطئ أو راكب لا يلتزم بقواعد السلامة، نرجو منك إبلاغنا عبر التطبيق وسنتعامل مع الأمر فورًا.
                 </p>
             </section>
         </main>
-
-        <footer class="safety-DOZz-footer-area">
-            <p>© 2025 DOZz - جميع الحقوق محفوظة</p>
-        </footer>
     </div>
+
 
     <!-- Footer Start -->
     <footer class="main-footer">
@@ -593,24 +630,26 @@
 
                                 <!-- About Footer Content Start -->
                                 <div class="about-footer-content">
-                                    <p>مع DOZ، نجعل التنقّل أكثر سهولة وأمانًا. ابتكار وحلول ذكية لخدمة العملاء بلا
-                                        حدود.</p>
+                                    <p ar-lang="مع DOZ، نجعل التنقّل أكثر سهولة وأمانًا. ابتكار وحلول ذكية لخدمة العملاء بلا حدود." 
+                                    en-lang="With DOZ, we make commuting easier and safer. Innovative and smart solutions for customer service without limits.">
+                                    مع DOZ، نجعل التنقّل أكثر سهولة وأمانًا. ابتكار وحلول ذكية لخدمة العملاء بلا حدود.
+                                    </p>
                                 </div>
-                                <a href=""><img src="images/appstore.png" alt=""
-                                        style="width: 150px; margin-top: 30px;"></a>
-                                <a href=""><img src="images/googleplay.png" alt=""
-                                        style="width: 150px; margin-top: 30px;"></a>
+                                <a href=""><img src="images/appstore.png" alt="" style="width: 150px; margin-top: 30px;"></a>
+                                <a href=""><img src="images/googleplay.png" alt="" style="width: 150px; margin-top: 30px;"></a>
                                 <!-- About Footer Content End -->
 
                                 <!-- Footer Newsletter Form Start -->
                                 <div class="footer-newsletter-form">
-                                    <h3>اشترك في نشرتنا الإخبارية:</h3>
+                                    <h3 ar-lang="اشترك في نشرتنا الإخبارية:" 
+                                        en-lang="Subscribe to our newsletter:">اشترك في نشرتنا الإخبارية:</h3>
                                     <form id="newsletterForm" action="#" method="POST">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control" id="mail"
-                                                placeholder="أدخل بريدك الإلكتروني" required>
-                                            <button type="submit" class="newsletter-btn"><i
-                                                    class="fa-regular fa-paper-plane"></i></button>
+                                                placeholder="أدخل بريدك الإلكتروني" 
+                                                ar-lang="أدخل بريدك الإلكتروني" 
+                                                en-lang="Enter your email" required>
+                                            <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
                                         </div>
                                     </form>
                                 </div>
@@ -623,10 +662,8 @@
                                 <!-- Footer Contact List Start -->
                                 <div class="footer-contact-list">
                                     <ul>
-                                        <li><a href="tel:+20123456789"><img src="images/icon-phone-accent.svg"
-                                                    alt="">+968 9765 3339</a></li>
-                                        <li><a href="mailto:info@DOZ.com"><img src="images/icon-mail-accent.svg"
-                                                    alt="">info@DOZ.com</a></li>
+                                        <li><a href="tel:+20123456789"><img src="images/icon-phone-accent.svg" alt="">+968 9765 3339</a></li>
+                                        <li><a href="mailto:info@DOZ.com"><img src="images/icon-mail-accent.svg" alt="">info@DOZ.com</a></li>
                                     </ul>
                                 </div>
                                 <!-- Footer Contact List End -->
@@ -635,36 +672,36 @@
                                 <div class="footer-links-list">
                                     <!-- Footer Links Start -->
                                     <div class="footer-links">
-                                        <h3>DOZ</h3>
+                                        <h3 ar-lang="DOZ" en-lang="DOZ">DOZ</h3>
                                         <ul>
-                                            <li><a href="index.html#benefits">لماذا DOZ؟</a></li>
-                                            <li><a href="index.html#how-it-works">كيف تعمل الخدمة ؟</a></li>
-                                            <li><a href="changelog.html">آخر التحديثات</a></li>
-                                            <li><a href="index.html#download">تحميل التطبيق</a></li>
+                                            <li><a href="index.html#benefits" ar-lang="لماذا DOZ؟" en-lang="Why DOZ?">لماذا DOZ؟</a></li>
+                                            <li><a href="index.html#how-it-works" ar-lang="كيف تعمل الخدمة ؟" en-lang="How does the service work?">كيف تعمل الخدمة ؟</a></li>
+                                            <li><a href="changelog.html" ar-lang="آخر التحديثات" en-lang="Latest updates">آخر التحديثات</a></li>
+                                            <li><a href="index.html#download" ar-lang="تحميل التطبيق" en-lang="Download the app">تحميل التطبيق</a></li>
                                         </ul>
                                     </div>
                                     <!-- Footer Links End -->
 
                                     <!-- Footer Links Start -->
                                     <div class="footer-links footer-service-links">
-                                        <h3>استكشف</h3>
+                                        <h3 ar-lang="استكشف" en-lang="Explore">استكشف</h3>
                                         <ul>
-                                            <li><a href="index.html#Testimonials">آراء المستخدمين</a></li>
-                                            <li><a href="index.html#faqs">الأسئلة الشائعة</a></li>
-                                            <li><a href="contact.html">الدعم الفني</a></li>
-                                            <li><a href="career-role.html"> سلامة السكوتر</a></li>
+                                            <li><a href="index.html#Testimonials" ar-lang="آراء المستخدمين" en-lang="User reviews">آراء المستخدمين</a></li>
+                                            <li><a href="index.html#faqs" ar-lang="الأسئلة الشائعة" en-lang="FAQs">الأسئلة الشائعة</a></li>
+                                            <li><a href="contact.html" ar-lang="الدعم الفني" en-lang="Technical support">الدعم الفني</a></li>
+                                            <li><a href="career-role.html" ar-lang="سلامة السكوتر" en-lang="Scooter safety">سلامة السكوتر</a></li>
                                         </ul>
                                     </div>
                                     <!-- Footer Links End -->
 
                                     <!-- Footer Links Start -->
                                     <div class="footer-links footer-social-links">
-                                        <h3>وسائل التواصل الاجتماعي</h3>
+                                        <h3 ar-lang="وسائل التواصل الاجتماعي" en-lang="Social Media">وسائل التواصل الاجتماعي</h3>
                                         <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i>فيسبوك</a></li>
-                                            <li><a href="#"><i class="fa-brands fa-twitter"></i>تويتر</a></li>
-                                            <li><a href="#"><i class="fa-brands fa-instagram"></i>إنستجرام</a></li>
-                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i>لينكدإن</a></li>
+                                            <li><a href="#" en-lang="Facebook" ar-lang="فيسبوك"><i class="fa-brands fa-facebook-f"></i>فيسبوك</a></li>
+                                            <li><a href="#" en-lang="Twitter" ar-lang="تويتر"><i class="fa-brands fa-twitter"></i>تويتر</a></li>
+                                            <li><a href="#" en-lang="Instagram" ar-lang="إنستجرام"><i class="fa-brands fa-instagram"></i>إنستجرام</a></li>
+                                            <li><a href="#" en-lang="LinkedIn" ar-lang="لينكدإن"><i class="fa-brands fa-linkedin-in"></i>لينكدإن</a></li>
                                         </ul>
                                     </div>
                                     <!-- Footer Links End -->
@@ -679,7 +716,8 @@
                     <div class="col-lg-12">
                         <!-- Footer Copyright Text Start -->
                         <div class="footer-copyright-text">
-                            <p>حقوق النشر © 2026 DOZ. جميع الحقوق محفوظة.</p>
+                            <p ar-lang="حقوق النشر © 2026 DOZ. جميع الحقوق محفوظة." 
+                            en-lang="Copyright © 2026 DOZ. All rights reserved.">حقوق النشر © 2026 DOZ. جميع الحقوق محفوظة.</p>
                         </div>
                         <!-- Footer Copyright Text End -->
                     </div>
@@ -690,6 +728,7 @@
     </footer>
     <!-- Footer End -->
 
+    <script src="js/lang.js"></script>
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
