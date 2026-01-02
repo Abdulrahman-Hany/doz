@@ -8251,3 +8251,27 @@ html:dir(ltr) .category-title::after {
     left: 0;
     right: unset;
 }
+@media (max-width: 768px) {
+	html:dir(ltr) .section-title h1 {
+    font-size: 33px;
+}
+html:dir(ltr) .hero-content .section-title p {
+    font-size: 15px;
+}
+
+html:dir(ltr) .scrolling-content span {
+    font-size: 19px;
+}
+html:dir(ltr) .section-title h3 {
+    font-size: 18px;
+}
+html:dir(ltr) .section-title h2 {
+    font-size: 38px;
+}
+html:dir(ltr) .section-title p {
+    font-size: 16px;
+}
+html:dir(ltr)  .faqs-item-content {
+        padding-left: 5px;
+    }
+}
