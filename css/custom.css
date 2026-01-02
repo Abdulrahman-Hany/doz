@@ -894,7 +894,7 @@ body:has(.offcanvas) {
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: capitalize;
-	padding: 8px 20px;
+	padding: 8px 36px;
 	color: var(--dark-color);
 	line-height: normal;
 	margin: 0;
@@ -8250,6 +8250,4 @@ html:dir(rtl) .project-rating-counter .icon-box {
 html:dir(ltr) .category-title::after {
     left: 0;
     right: unset;
-}
-html:dir(ltr)
 }
