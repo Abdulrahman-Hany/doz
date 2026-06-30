@@ -96,7 +96,7 @@
             font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 40px;
-            background: linear-gradient(135deg, #fff, #e34603);
+            background: linear-gradient(135deg, #fff, #FFDD00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -113,8 +113,8 @@
             color: rgba(255, 255, 255, .5);
             line-height: 1.6;
             padding: 20px;
-            border-right: 3px solid #e34603;
-            background: rgba(227, 70, 3, .05);
+            border-right: 3px solid #FFDD00;
+            background: #ffdd000e;
             border-radius: 8px;
         }
 
@@ -132,10 +132,10 @@
 
         .DOZ-calculator-card {
             background: linear-gradient(135deg, rgba(20, 20, 20, .9), rgba(30, 30, 30, .8));
-            border: 2px solid rgba(227, 70, 3, .3);
+            border: 2px solid #FFDD004d;
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 20px 60px rgba(227, 70, 3, .2);
+            box-shadow: 0 20px 60px #FFDD004d;
             position: relative;
             overflow: hidden;
         }
@@ -162,9 +162,9 @@
         .DOZ-control-btn {
             width: 60px;
             height: 60px;
-            border: 2px solid #e34603;
+            border: 2px solid #FFDD00;
             background: rgba(227, 70, 3, .1);
-            color: #e34603;
+            color: #FFDD00;
             font-size: 2rem;
             border-radius: 12px;
             cursor: pointer;
@@ -172,7 +172,7 @@
         }
 
         .DOZ-control-btn:hover {
-            background: #e34603;
+            background: #FFDD00;
             color: #fff;
         }
 
@@ -194,8 +194,8 @@
         .DOZ-stat-item {
             margin-bottom: 40px;
             padding: 30px;
-            background: rgba(227, 70, 3, .05);
-            border-right: 4px solid #e34603;
+            background: #FFDD004d;
+            border-right: 4px solid #FFDD00;
             border-radius: 15px;
         }
 
@@ -224,7 +224,7 @@
         }
 
         .DOZ-currency {
-            color: #e34603;
+            color: #FFDD00;
         }
 
         @keyframes fadeInUp {
@@ -266,14 +266,14 @@
         @keyframes countUpdate {
             50% {
                 transform: scale(1.1);
-                color: #e34603;
+                color: #FFDD00;
             }
         }
 
         @keyframes valueHighlight {
             50% {
                 transform: scale(1.05);
-                color: #e34603;
+                color: #FFDD00;
             }
         }
 
@@ -738,7 +738,7 @@
                         <div class="why-choose-image two ">
                             <div class="why-choose-img ">
                                 <figure class="image-anime two ">
-                                    <img src="images/why-choose-image.jpg" alt=" ">
+                                    <img src="images/why-choose-images.png" alt=" ">
                                 </figure>
                             </div>
                         </div>
@@ -811,7 +811,7 @@
                         <div class="why-choose-image two ">
                             <div class="why-choose-img circal ">
                                 <figure class="image-anime two circal ">
-                                    <img src="images/project-5.jpg" alt=" ">
+                                    <img src="images/project-5.png" alt=" ">
                                 </figure>
                             </div>
                         </div>
@@ -883,7 +883,7 @@
                         <div class="why-choose-image two ">
                             <div class="why-choose-img ">
                                 <figure class="image-anime two ">
-                                    <img src="images/our-feature-image.jpg" alt=" ">
+                                    <img src="images/our-feature-image.png" alt=" ">
                                 </figure>
                             </div>
                         </div>
@@ -1515,10 +1515,14 @@
                                         حدود.
                                     </p>
                                 </div>
-                                <a href=" "><img src="images/appstore.png" alt=""
-                                        style="width: 150px; margin-top: 30px; "></a>
-                                <a href=" "><img src="images/googleplay.png" alt=""
-                                        style="width: 150px; margin-top: 30px; "></a>
+                                <button type="button" class="store-action-btn" data-store-trigger="appstore">
+                                    <img src="images/appstore.png" alt="App Store"
+                                        style="width: 150px; margin-top: 30px;">
+                                </button>
+                                <button type="button" class="store-action-btn" data-store-trigger="googleplay">
+                                    <img src="images/googleplay.png" alt="Google Play"
+                                        style="width: 150px; margin-top: 30px;">
+                                </button>
                                 <!-- About Footer Content End -->
 
                                 <!-- Footer Newsletter Form Start -->
@@ -1626,6 +1630,26 @@
     </footer>
     <!-- Footer End -->
 
+
+    <script>
+        const items = document.querySelectorAll('.features-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = 1;
+                    e.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        items.forEach((item, i) => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = `0.6s ease ${i * 0.05}s`;
+            observer.observe(item);
+        });
+    </script>
     <script>
         const BASE_SCOOTERS = 50;
         const INVESTMENT_PER_SCOOTER = 625;
@@ -1672,27 +1696,66 @@
 
         updateDisplay();
     </script>
+    <!-- Store Modal Start -->
+    <div class="modal fade store-modal" id="storeModal" tabindex="-1" aria-labelledby="storeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered store-modal-dialog">
+            <div class="modal-content store-modal-content">
+                <div class="modal-header store-modal-header">
+                    <h5 class="modal-title store-modal-title" id="storeModalLabel" ar-lang="قريبًا"
+                        en-lang="Coming Soon">
+                        قريبًا
+                    </h5>
 
+                    <button type="button" class="btn-close store-modal-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body store-modal-body">
+                    <div class="store-modal-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+
+                    <p id="storeModalMessage" ar-lang="سيكون متاحًا قريبًا على المنصة المختارة."
+                        en-lang="It will be available soon on the selected platform.">
+                        سيكون متاحًا قريبًا على المنصة المختارة.
+                    </p>
+                </div>
+
+                <div class="modal-footer store-modal-footer">
+                    <button type="button" class="btn btn-default store-modal-btn" data-bs-dismiss="modal"
+                        ar-lang="إغلاق" en-lang="Close">
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Store Modal End -->
     <script>
-        const items = document.querySelectorAll('.features-item');
+        document.addEventListener('DOMContentLoaded', function () {
+            const triggerButtons = document.querySelectorAll('[data-store-trigger]');
+            const modalTitle = document.getElementById('storeModalLabel');
+            const modalMessage = document.getElementById('storeModalMessage');
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.style.opacity = 1;
-                    e.target.style.transform = 'translateY(0)';
-                }
+            triggerButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const type = button.getAttribute('data-store-trigger');
+
+                    if (type === 'appstore') {
+                        modalTitle.textContent = 'قريبًا على App Store';
+                        modalMessage.textContent = 'سيتوفر التطبيق قريبًا على App Store، وسنشارك الرابط الرسمي فور إطلاقه.';
+                    } else {
+                        modalTitle.textContent = 'قريبًا على Google Play';
+                        modalMessage.textContent = 'سيتوفر التطبيق قريبًا على Google Play، وسنشارك الرابط الرسمي فور إطلاقه.';
+                    }
+
+                    const modal = new bootstrap.Modal(document.getElementById('storeModal'));
+                    modal.show();
+                });
             });
-        }, { threshold: 0.1 });
-
-        items.forEach((item, i) => {
-            item.style.opacity = 0;
-            item.style.transform = 'translateY(20px)';
-            item.style.transition = `0.6s ease ${i * 0.05}s`;
-            observer.observe(item);
         });
     </script>
-
     <script src="js/lang.js "></script>
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js "></script>

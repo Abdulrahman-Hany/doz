@@ -343,7 +343,7 @@
                         <!-- Project Single Image Start -->
                         <div class="project-single-image ">
                             <figure class="image-anime reveal ">
-                                <img src="images/project-2.jpg" alt=" ">
+                                <img src="images/project-2.png" alt=" ">
                             </figure>
                         </div>
                         <!-- Project Single Image End -->
@@ -616,10 +616,14 @@
                                         حدود.
                                     </p>
                                 </div>
-                                <a href=" "><img src="images/appstore.png" alt=""
-                                        style="width: 150px; margin-top: 30px; "></a>
-                                <a href=" "><img src="images/googleplay.png" alt=""
-                                        style="width: 150px; margin-top: 30px; "></a>
+                                <button type="button" class="store-action-btn" data-store-trigger="appstore">
+                                    <img src="images/appstore.png" alt="App Store"
+                                        style="width: 150px; margin-top: 30px;">
+                                </button>
+                                <button type="button" class="store-action-btn" data-store-trigger="googleplay">
+                                    <img src="images/googleplay.png" alt="Google Play"
+                                        style="width: 150px; margin-top: 30px;">
+                                </button>
                                 <!-- About Footer Content End -->
 
                                 <!-- Footer Newsletter Form Start -->
@@ -727,6 +731,53 @@
     </footer>
     <!-- Footer End -->
     <script src="js/lang.js "></script>
+    <!-- Store Modal Start -->
+    <div class="modal fade store-modal" id="storeModal" tabindex="-1" aria-labelledby="storeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered store-modal-dialog">
+            <div class="modal-content store-modal-content">
+                <div class="modal-header store-modal-header">
+                    <h5 class="modal-title store-modal-title" id="storeModalLabel">قريبًا</h5>
+                    <button type="button" class="btn-close store-modal-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body store-modal-body">
+                    <div class="store-modal-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <p id="storeModalMessage">سيكون متاحًا قريبًا على المنصة المختارة.</p>
+                </div>
+                <div class="modal-footer store-modal-footer">
+                    <button type="button" class="btn btn-default store-modal-btn" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Store Modal End -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const triggerButtons = document.querySelectorAll('[data-store-trigger]');
+            const modalTitle = document.getElementById('storeModalLabel');
+            const modalMessage = document.getElementById('storeModalMessage');
+
+            triggerButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const type = button.getAttribute('data-store-trigger');
+
+                    if (type === 'appstore') {
+                        modalTitle.textContent = 'قريبًا على App Store';
+                        modalMessage.textContent = 'سيتوفر التطبيق قريبًا على App Store، وسنشارك الرابط الرسمي فور إطلاقه.';
+                    } else {
+                        modalTitle.textContent = 'قريبًا على Google Play';
+                        modalMessage.textContent = 'سيتوفر التطبيق قريبًا على Google Play، وسنشارك الرابط الرسمي فور إطلاقه.';
+                    }
+
+                    const modal = new bootstrap.Modal(document.getElementById('storeModal'));
+                    modal.show();
+                });
+            });
+        });
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js "></script>

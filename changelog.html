@@ -67,13 +67,13 @@
         .DOZ-changelog-header {
             text-align: center;
             margin-bottom: 50px;
-            border-bottom: 3px solid #E34603;
+            border-bottom: 3px solid #FFDD00;
             padding-bottom: 30px;
         }
 
         .DOZ-changelog-title {
             font-size: 2.5em;
-            color: #E34603;
+            color: #FFDD00;
             margin-bottom: 15px;
             font-weight: bold;
         }
@@ -90,7 +90,7 @@
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 30px;
-            border-right: 5px solid #E34603;
+            border-right: 5px solid #FFDD00;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -105,7 +105,7 @@
 
         .DOZ-version-number {
             font-size: 1.8em;
-            color: #E34603;
+            color: #FFDD00;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -131,11 +131,11 @@
 
         .DOZ-section-title {
             font-size: 1.3em;
-            color: #E34603;
+            color: #FFDD00;
             font-weight: bold;
             margin: 25px 0 15px 0;
             padding-right: 10px;
-            border-right: 4px solid #E34603;
+            border-right: 4px solid #FFDD00;
         }
 
         .DOZ-feature-list {
@@ -161,7 +161,7 @@
             content: "✓";
             position: absolute;
             right: 15px;
-            color: #E34603;
+            color: #FFDD00;
             font-weight: bold;
             font-size: 1.2em;
         }
@@ -627,10 +627,14 @@
                                         حدود.
                                     </p>
                                 </div>
-                                <a href=""><img src="images/appstore.png" alt=""
-                                        style="width: 150px; margin-top: 30px;"></a>
-                                <a href=""><img src="images/googleplay.png" alt=""
-                                        style="width: 150px; margin-top: 30px;"></a>
+                                <button type="button" class="store-action-btn" data-store-trigger="appstore">
+                                    <img src="images/appstore.png" alt="App Store"
+                                        style="width: 150px; margin-top: 30px;">
+                                </button>
+                                <button type="button" class="store-action-btn" data-store-trigger="googleplay">
+                                    <img src="images/googleplay.png" alt="Google Play"
+                                        style="width: 150px; margin-top: 30px;">
+                                </button>
                                 <!-- About Footer Content End -->
 
                                 <!-- Footer Newsletter Form Start -->
@@ -737,6 +741,53 @@
         <!-- Footer Main End -->
     </footer>
     <!-- Footer End -->
+    <!-- Store Modal Start -->
+    <div class="modal fade store-modal" id="storeModal" tabindex="-1" aria-labelledby="storeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered store-modal-dialog">
+            <div class="modal-content store-modal-content">
+                <div class="modal-header store-modal-header">
+                    <h5 class="modal-title store-modal-title" id="storeModalLabel">قريبًا</h5>
+                    <button type="button" class="btn-close store-modal-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body store-modal-body">
+                    <div class="store-modal-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <p id="storeModalMessage">سيكون متاحًا قريبًا على المنصة المختارة.</p>
+                </div>
+                <div class="modal-footer store-modal-footer">
+                    <button type="button" class="btn btn-default store-modal-btn" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Store Modal End -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const triggerButtons = document.querySelectorAll('[data-store-trigger]');
+            const modalTitle = document.getElementById('storeModalLabel');
+            const modalMessage = document.getElementById('storeModalMessage');
+
+            triggerButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const type = button.getAttribute('data-store-trigger');
+
+                    if (type === 'appstore') {
+                        modalTitle.textContent = 'قريبًا على App Store';
+                        modalMessage.textContent = 'سيتوفر التطبيق قريبًا على App Store، وسنشارك الرابط الرسمي فور إطلاقه.';
+                    } else {
+                        modalTitle.textContent = 'قريبًا على Google Play';
+                        modalMessage.textContent = 'سيتوفر التطبيق قريبًا على Google Play، وسنشارك الرابط الرسمي فور إطلاقه.';
+                    }
+
+                    const modal = new bootstrap.Modal(document.getElementById('storeModal'));
+                    modal.show();
+                });
+            });
+        });
+    </script>
 
     <script src="js/lang.js"></script>
     <!-- Jquery Library File -->
